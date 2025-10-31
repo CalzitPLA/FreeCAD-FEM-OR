@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>FEM Settings</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="tabGeneral">
+      <attribute name="title">
+       <string>General</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_1">
+       <item>
+        <widget class="QGroupBox" name="groupBoxGeneral">
+         <property name="title">
+          <string>General FEM Settings</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QCheckBox" name="OverwriteSolverWorkingDirectory">
+            <property name="text">
+             <string>Overwrite solver working directory</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="labelWorkingDir">
+            <property name="text">
+             <string>Working Directory:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="WorkingDirectory">
+            <item>
+             <property name="text">
+              <string>Temporary directory</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Beside .FCStd file</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Custom directory</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="CustomDirectoryPath"/>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="KeepResultsOnReRun">
+            <property name="text">
+             <string>Keep results on re-run</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabOpenRadioss">
+      <attribute name="title">
+       <string>OpenRadioss</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QGroupBox" name="groupBoxOpenRadioss">
+         <property name="title">
+          <string>OpenRadioss Solver Settings</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutEngine">
+            <item>
+             <widget class="QLabel" name="labelEngine">
+              <property name="text">
+               <string>Engine Binary:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="OpenRadiossEngineBinaryPath">
+              <property name="text">
+               <string>/home/nemo/Dokumente/Software/OpenRadioss_linux64/OpenRadioss/exec/engine_linux64_gf</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="BrowseEngineBinary">
+              <property name="text">
+               <string>Browse...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="UseStandardOpenRadiossEngineLocation">
+              <property name="text">
+               <string>Use standard location</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutStarter">
+            <item>
+             <widget class="QLabel" name="labelStarter">
+              <property name="text">
+               <string>Starter Binary:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="OpenRadiossStarterBinaryPath">
+              <property name="text">
+               <string>/home/nemo/Dokumente/Software/OpenRadioss_linux64/OpenRadioss/exec/starter_linux64_gf</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="BrowseStarterBinary">
+              <property name="text">
+               <string>Browse...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="UseStandardOpenRadiossStarterLocation">
+              <property name="text">
+               <string>Use standard location</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutAnimToVTK">
+            <item>
+             <widget class="QLabel" name="labelAnimToVTK">
+              <property name="text">
+               <string>Anim-to-VTK Converter:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="OpenRadiossAnimToVTKBinaryPath">
+              <property name="text">
+               <string>/home/nemo/Dokumente/Software/OpenRadioss_linux64/OpenRadioss/exec/anim_to_vtk</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="BrowseAnimToVTKBinary">
+              <property name="text">
+               <string>Browse...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="UseStandardOpenRadiossAnimToVTKLocation">
+              <property name="text">
+               <string>Use standard location</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabCalculix">
+      <attribute name="title">
+       <string>CalculiX</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_5">
+       <item>
+        <widget class="QGroupBox" name="groupBoxCalculix">
+         <property name="title">
+          <string>CalculiX Solver Settings</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutCcx">
+            <item>
+             <widget class="QLabel" name="labelCcx">
+              <property name="text">
+               <string>CCX Binary:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="CcxBinaryPath">
+              <property name="text">
+               <string>ccx</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="BrowseCcxBinary">
+              <property name="text">
+               <string>Browse...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="UseStandardCcxLocation">
+              <property name="text">
+               <string>Use standard location</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLabel" name="labelAnalysisCPUs">
+            <property name="text">
+             <string>Number of CPUs for analysis:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="AnalysisNumCPUs">
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>128</number>
+            </property>
+            <property name="value">
+             <number>1</number>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabElmer">
+      <attribute name="title">
+       <string>Elmer</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <item>
+        <widget class="QGroupBox" name="groupBoxElmer">
+         <property name="title">
+          <string>Elmer Solver Settings</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_8">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutElmerSolver">
+            <item>
+             <widget class="QLabel" name="labelElmerSolver">
+              <property name="text">
+               <string>ElmerSolver Binary:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="ElmerBinaryPath">
+              <property name="text">
+               <string>ElmerSolver</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="BrowseElmerBinary">
+              <property name="text">
+               <string>Browse...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="UseStandardElmerLocation">
+              <property name="text">
+               <string>Use standard location</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayoutElmerGrid">
+            <item>
+             <widget class="QLabel" name="labelElmerGrid">
+              <property name="text">
+               <string>ElmerGrid Binary:</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="GridBinaryPath">
+              <property name="text">
+               <string>ElmerGrid</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="BrowseGridBinary">
+              <property name="text">
+               <string>Browse...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="UseStandardGridLocation">
+              <property name="text">
+               <string>Use standard location</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabAdvanced">
+      <attribute name="title">
+       <string>Advanced</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_9">
+       <item>
+        <widget class="QGroupBox" name="groupBoxAdvanced">
+         <property name="title">
+          <string>Advanced FEM Settings</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <item>
+           <widget class="QCheckBox" name="WriteCommentsToInputFile">
+            <property name="text">
+             <string>Write comments to input file</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="labelDefaultSolver">
+            <property name="text">
+             <string>Default Solver:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="DefaultSolver">
+            <item>
+             <property name="text">
+              <string>None</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>CalculiX</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Elmer</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>OpenRadioss</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

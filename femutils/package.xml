@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package format="1">
+    <name>FEM Utils</name>
+    <description>Utilities for FreeCAD's FEM workbench</description>
+    <version>0.1.0</version>
+    <date>2024-10-31</date>
+    <maintainer email="user@example.com">Your Name</maintainer>
+    <license>LGPL-2.1-or-later</license>
+    <url type="repository">https://github.com/yourusername/femutils</url>
+    <dependencies>
+        <freecad>0.19</freecad>
+    </dependencies>
+    <content>
+        <subdirectory>nodeset_extractor</subdirectory>
+    </content>
+</package>

@@ -1,0 +1,291 @@
+{
+  "title": "LS-DYNA Keyword971 CFG Files - Complete Syntax Guide",
+  "overview": "\nLS-DYNA Keyword971 CFG System Overview:\n\n• Total Keywords: 540 across 32 categories\n• Primary Categories: Materials (178), Control Cards (102), Sets (48), Properties (43)\n• Format Support: LS-DYNA Keyword971 with version-specific variants\n• Parameter Types: 5 type categories\n• Validation: Comprehensive GUI-based parameter validation\n",
+  "common_parameters": {
+    "identifier_fields": [
+      "KEYWORD_STR",
+      "IO_FLAG",
+      "OPT_TYPE_STR",
+      "TITLE"
+    ],
+    "comment_fields": [
+      "CommentEnumField",
+      "Num_Comments",
+      "Comments"
+    ],
+    "material_properties": [
+      "Rho",
+      "E",
+      "Nu"
+    ],
+    "load_properties": [
+      "magnitude",
+      "curveid",
+      "load_dof"
+    ],
+    "contact_properties": [
+      "FS",
+      "FD",
+      "DC",
+      "VC"
+    ]
+  },
+  "ls_dyna_syntax": {
+    "headers": {
+      "material_headers": [
+        "*MAT_ELASTIC",
+        "*MAT_PIECEWISE_LINEAR_PLASTICITY"
+      ],
+      "load_headers": [
+        "*LOAD_NODE_POINT",
+        "*LOAD_NODE_SET"
+      ],
+      "contact_headers": [
+        "*CONTACT_AUTOMATIC_GENERAL"
+      ],
+      "conditional_headers": {
+        "multiple_options": "Based on parameter values (MAT_OPTION, DOF, etc.)",
+        "distribution_types": "Point loads vs Set loads",
+        "expansion_flags": "Expanded vs Compact format"
+      },
+      "header_patterns": {
+        "material_pattern": "*MAT_{MaterialType}",
+        "load_pattern": "*LOAD_{EntityType}_{LoadType}",
+        "contact_pattern": "*CONTACT_{ContactType}",
+        "boundary_pattern": "*BOUNDARY_{ConditionType}",
+        "control_pattern": "*CONTROL_{ControlType}"
+      }
+    },
+    "card_formats": {
+      "width_specifiers": [
+        "%10d",
+        "%10lg",
+        "%10f",
+        "%8d",
+        "%12lg"
+      ],
+      "common_layouts": [
+        "ID fields (10 digits)",
+        "Real values (10-12 digits)",
+        "Integer flags (8-10 digits)",
+        "String fields (variable width)"
+      ],
+      "format_examples": {
+        "material_card": "%10d%10lg%10lg%10lg%10lg%10lg%10lg%10lg",
+        "load_card": "%10d%10d%10d%10lg%10d",
+        "contact_card": "%10d%10d%10d%10d%10d%10lg          %10d"
+      },
+      "field_mapping": {
+        "ID_fields": "10-digit integers for entity IDs",
+        "real_values": "10-12 digit floating point for physical values",
+        "integer_flags": "8-10 digit integers for options and flags",
+        "string_fields": "Variable width text fields"
+      }
+    },
+    "examples": {
+      "mat_001.cfg": {
+        "description": "Simple elastic material",
+        "category": "MAT",
+        "sections": [
+          "ATTRIBUTES",
+          "DEFAULTS",
+          "SKEYWORDS_IDENTIFIER",
+          "DRAWABLES",
+          "GUI",
+          "FORMAT"
+        ],
+        "parameter_count": 16,
+        "data_types": [
+          "FLOAT",
+          "INT",
+          "STRING",
+          "BOOL"
+        ],
+        "format_cards": {
+          "headers": [],
+          "cards": [],
+          "comments": [],
+          "free_cards": []
+        },
+        "validation_rules": 12
+      },
+      "mat_024.cfg": {
+        "description": "Complex piecewise linear plasticity",
+        "category": "MAT",
+        "sections": [
+          "ATTRIBUTES",
+          "DEFAULTS",
+          "SKEYWORDS_IDENTIFIER",
+          "DRAWABLES",
+          "GUI",
+          "FORMAT"
+        ],
+        "parameter_count": 36,
+        "data_types": [
+          "FLOAT",
+          "FUNCT",
+          "INT",
+          "STRING"
+        ],
+        "format_cards": {
+          "headers": [],
+          "cards": [
+            "%10d%10lg%10lg%10lg%10lg%10lg%10lg%10lg",
+            "%10lg%10lg%10lg%10lg%10lg",
+            "%10lg%10lg%10lg%10lg%10lg%10lg%10lg%10lg",
+            "%10lg%10lg%10lg%10lg%10lg%10lg%10lg%10lg"
+          ],
+          "comments": [
+            "$      MID       RHO         E        PR      SIGY      ETAN      FAIL      TDEL",
+            "$        C         P      LCSS      LCSR        VP",
+            "$     EPS1      EPS2      EPS3      EPS4      EPS5      EPS6      EPS7      EPS8",
+            "$      ES1       ES2       ES3       ES4       ES5       ES6       ES7       ES8"
+          ],
+          "free_cards": []
+        },
+        "validation_rules": 2
+      },
+      "load_node_force.cfg": {
+        "description": "Node force loading",
+        "category": "LOAD",
+        "sections": [
+          "ATTRIBUTES",
+          "DEFAULTS",
+          "GUI",
+          "FORMAT",
+          "DEFINITIONS"
+        ],
+        "parameter_count": 21,
+        "data_types": [
+          "SUBOBJECT",
+          "NODE",
+          "BOOL",
+          "FUNCT",
+          "MULTIOBJECT",
+          "SYSTEM",
+          "INT",
+          "UINT",
+          "FLOAT"
+        ],
+        "format_cards": {
+          "headers": [
+            "*LOAD_NODE_POINT"
+          ],
+          "cards": [],
+          "comments": [],
+          "free_cards": []
+        },
+        "validation_rules": 6
+      },
+      "AutomaticGeneral.cfg": {
+        "description": "General contact definition",
+        "category": "CONTACT",
+        "sections": [
+          "ATTRIBUTES",
+          "DEFAULTS",
+          "SKEYWORDS_IDENTIFIER",
+          "GUI",
+          "FORMAT",
+          "DEFINITIONS"
+        ],
+        "parameter_count": 152,
+        "data_types": [
+          "SETS",
+          "STRING",
+          "FUNCT",
+          "SYSTEM",
+          "INT",
+          "COMPONENT",
+          "FLOAT"
+        ],
+        "format_cards": {
+          "headers": [],
+          "cards": [
+            "%10d%10d%10d%10d%10d%10lg          %10d"
+          ],
+          "comments": [
+            "$   IGNORE    BUCKET  LCBUCKET  NS2TRACK  INITITER    PARMAX              CPARM8"
+          ],
+          "free_cards": []
+        },
+        "validation_rules": 22
+      }
+    }
+  },
+  "user_interface_groups": {
+    "basic_parameters": {
+      "description": "Simple scalar parameters",
+      "types": [
+        "INT",
+        "FLOAT",
+        "STRING",
+        "BOOL"
+      ],
+      "examples": [
+        "Density (FLOAT)",
+        "Young's Modulus (FLOAT)",
+        "Poisson Ratio (FLOAT)"
+      ]
+    },
+    "reference_parameters": {
+      "description": "References to other entities",
+      "types": [
+        "FUNCT",
+        "SETS",
+        "COMPONENT",
+        "NODE",
+        "ELEMS"
+      ],
+      "examples": [
+        "Load Curves (FUNCT)",
+        "Node Sets (SETS)",
+        "Parts (COMPONENT)"
+      ]
+    },
+    "advanced_parameters": {
+      "description": "Complex parameter relationships",
+      "types": [
+        "MULTIOBJECT",
+        "SUBOBJECT",
+        "SYSTEM",
+        "UINT"
+      ],
+      "examples": [
+        "Multiple Entity Selection (MULTIOBJECT)",
+        "Coordinate Systems (SYSTEM)"
+      ]
+    },
+    "common_groupings": {
+      "material_basics": [
+        "Rho",
+        "E",
+        "Nu",
+        "KEYWORD_STR"
+      ],
+      "load_definition": [
+        "magnitude",
+        "curveid",
+        "load_dof",
+        "entityid"
+      ],
+      "contact_friction": [
+        "FS",
+        "FD",
+        "DC",
+        "VC"
+      ],
+      "identification": [
+        "KEYWORD_STR",
+        "IO_FLAG",
+        "OPT_TYPE_STR",
+        "TITLE"
+      ]
+    }
+  },
+  "implementation_guide": {
+    "parameter_extraction": "\nFor extracting parameters from CFG files:\n1. Look for ATTRIBUTES section with VALUE() definitions\n2. Extract parameter name, type, and description\n3. Check GUI section for mandatory/optional classification\n4. Map to appropriate LS-DYNA card format positions\n",
+    "syntax_generation": "\nFor generating LS-DYNA syntax:\n1. Use HEADER() for keyword definition\n2. Apply CARD() format with parameter substitution\n3. Include COMMENT() for field descriptions\n4. Handle conditional formatting based on options\n",
+    "user_interface": "\nFor user-friendly interface:\n1. Group parameters by mandatory/optional\n2. Show physical dimensions for validation\n3. Provide dropdowns for enumerated options\n4. Enable conditional parameter visibility\n",
+    "validation": "\nFor parameter validation:\n1. Check required vs optional parameters\n2. Validate physical units and dimensions\n3. Ensure entity reference compatibility\n4. Apply conditional logic for parameter relationships\n"
+  }
+}
