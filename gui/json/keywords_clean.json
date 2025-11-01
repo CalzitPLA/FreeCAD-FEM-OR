@@ -1,0 +1,1649 @@
+[
+  {
+    "id": 213,
+    "name": "*AIRBAG_ADIABATIC_GAS_MODEL_ID",
+    "category": "Airbag",
+    "description": "This model defines a one-chambered airbag filed by adiabatic gas. Uniform pressure method is used.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/airbag_adiabatic_gas_model_id_lsdyna_r.htm"
+  },
+  {
+    "id": 214,
+    "name": "*AIRBAG_LINEAR_FLUID_ID",
+    "category": "Airbag",
+    "description": "This model defines a control volume filled with a liquid.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/airbag_linear_fluid_id_lsdyna_r.htm"
+  },
+  {
+    "id": 215,
+    "name": "*AIRBAG_SHELL_REFERENCE_GEOMETRY",
+    "category": "Airbag",
+    "description": "Define the reference state for elements belonging to a part using given element and node identifiers with possible scaling for the nodes with defined scale center and scale factor.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/airbag_shell_reference_geometry_lsdyna_r.htm"
+  },
+  {
+    "id": 216,
+    "name": "*AIRBAG_LOAD_CURVE_ID",
+    "category": "Airbag",
+    "description": "This model defines a one-chambered airbag with pressure specified as function of time.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/airbag_load_curve_id_lsdyna_r.htm"
+  },
+  {
+    "id": 217,
+    "name": "*AIRBAG_PARTICLE",
+    "category": "Airbag",
+    "description": "Defines a Finite Volume Method airbag.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/airbag_particle_lsdyna_r.htm"
+  },
+  {
+    "id": 218,
+    "name": "*BOUNDARY_SPC",
+    "category": "Boundary",
+    "description": "Define boundary conditions on nodes to fix translation and rotation.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/boundary_spc_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 219,
+    "name": "*AIRBAG_SIMPLE_PRESSURE_VOLUME",
+    "category": "Airbag",
+    "description": "Describes a one-chambered airbag with pressure as a function of volume.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/airbag_simple_pressure_volume_lsdyna_r.htm"
+  },
+  {
+    "id": 220,
+    "name": "*AIRBAG_SIMPLE_AIRBAG_MODEL",
+    "category": "Airbag",
+    "description": "This model defines a one-chambered airbag with uniform pressure method, injected gas and vent hole.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/airbag_simple_airbag_model_lsdyna_r.htm"
+  },
+  {
+    "id": 221,
+    "name": "*BOUNDARY_PRESCRIBED_MOTION",
+    "category": "Boundary",
+    "description": "This keyword defines an imposed velocity, acceleration, or displacement applied to a node or node set.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/boundary_prescribed_motion_lsdyna_r.htm"
+  },
+  {
+    "id": 222,
+    "name": "*CONSTRAINED_EXTRA_NODES",
+    "category": "Constrained",
+    "description": "Define extra nodes to add to a rigid body.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/constrained_extra_nodes_lsdyna_r.htm"
+  },
+  {
+    "id": 223,
+    "name": "*CONSTRAINED_GENERALIZED_WELD_SPOT",
+    "category": "Constrained",
+    "description": "Define a connection between 2 nodes with a possible force-based failure model.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/constrained_generalized_weld_spot_lsdyna_r.htm"
+  },
+  {
+    "id": 224,
+    "name": "*CONSTRAINED_INTERPOLATION",
+    "category": "Constrained",
+    "description": "Defines an RBE3 element.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/constrained_interpolation_lsdyna_r.htm"
+  },
+  {
+    "id": 225,
+    "name": "*CONSTRAINED_JOINT",
+    "category": "Constrained",
+    "description": "Define a joint between two rigid bodies.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/constrained_joint_lsdyna_r.htm"
+  },
+  {
+    "id": 226,
+    "name": "*CONSTRAINED_NODAL_SET",
+    "category": "Constrained",
+    "description": "Defines a translational constraint to a set of nodes in the global coordinate system. There is no rotational coupling.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/constrained_nodal_set_lsdyna_r.htm"
+  },
+  {
+    "id": 227,
+    "name": "*CONSTRAINED_RIGID_BODIES",
+    "category": "Constrained",
+    "description": "Define rigid bodies assembly.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/constrained_rigid_bodies_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 228,
+    "name": "*CONSTRAINED_NODAL_RIGID_BODY",
+    "category": "Constrained",
+    "description": "This keyword defines a nodal rigid body.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/constrained_nodal_rigid_body_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 229,
+    "name": "*CONSTRAINED_JOINT_STIFFNESS",
+    "category": "Constrained",
+    "description": "Define a stiffness, stop angles and friction for rotational DOFs of a joint between two rigid bodies.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/constrained_joint_stiffness_lsdyna_r.htm"
+  },
+  {
+    "id": 230,
+    "name": "*CONSTRAINED_SPOTWELD",
+    "category": "Constrained",
+    "description": "Define a connection between 2 nodes with a possible force based failure model.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/constrained_spotweld_lsdyna_r.htm"
+  },
+  {
+    "id": 231,
+    "name": "*CONTACT_AIRBAG_SINGLE_SURFACE",
+    "category": "Contact",
+    "description": "Define automatic single contact for airbags.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/contact_airbag_single_surface_lsdyna_r.htm"
+  },
+  {
+    "id": 232,
+    "name": "*CONTACT_AUTOMATIC_GENERAL",
+    "category": "Contact",
+    "description": "Define an automatic general contact interface between elements.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/contact_automatic_general_lsdyna_r.htm"
+  },
+  {
+    "id": 233,
+    "name": "*CONTACT_AUTOMATIC_BEAMS_TO_SURFACE",
+    "category": "Contact",
+    "description": "Define nodes of beam elements to surface contact interface.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/contact_automatic_beams_to_surface_lsdyna_r.htm"
+  },
+  {
+    "id": 234,
+    "name": "*CONTACT_AUTOMATIC_NODES_TO_SURFACE",
+    "category": "Contact",
+    "description": "Define nodes to surface contact interface.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/contact_automatic_nodes_to_surface_lsdyna_r.htm"
+  },
+  {
+    "id": 235,
+    "name": "*CONTACT_ERODING_NODES_TO_SURFACE",
+    "category": "Contact",
+    "description": "Define nodes to surface contact interface.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/contact_eroding_nodes_to_surface_lsdyna_r.htm"
+  },
+  {
+    "id": 236,
+    "name": "*CONTACT_ERODING_SINGLE_SURFACE",
+    "category": "Contact",
+    "description": "Define automatic single contact interface set of shell and solid elements.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/contact_eroding_single_surface_lsdyna_r.htm"
+  },
+  {
+    "id": 237,
+    "name": "*CONTACT_AUTOMATIC_SURFACE_TO_SURFACE",
+    "category": "Contact",
+    "description": "Define surface to surface contact between a set of shell and solid elements.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/contact_automatic_surface_to_surface_lsdyna_r.htm"
+  },
+  {
+    "id": 238,
+    "name": "*CONTACT_ERODING_SURFACE_TO_SURFACE",
+    "category": "Contact",
+    "description": "Define surface to surface contact between a set of shell and solid elements.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/contact_eroding_surface_to_surface_lsdyna_r.htm"
+  },
+  {
+    "id": 239,
+    "name": "*CONTACT_AUTOMATIC_SINGLE_SURFACE",
+    "category": "Contact",
+    "description": "Define automatic single contact interface between elements.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/contact_automatic_single_surface_lsdyna_r.htm"
+  },
+  {
+    "id": 240,
+    "name": "*CONTACT_SPOTWELD",
+    "category": "Contact",
+    "description": "Define nodes to surface contact interface dedicated for spotweld connection.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/contact_spotweld_lsdyna_r.htm"
+  },
+  {
+    "id": 241,
+    "name": "*CONTACT_FORCE_TRANSDUCER_PENALTY",
+    "category": "Contact",
+    "description": "Accumulates output for contact forces (from other existing contacts) acting on a given set of nodes/segments determined by set, part or subset with optional selection of interacting main side contact entities and intersection between sets and boxes.",
+    "documentation": "topics/solvers/rad/contact_lsdyna_r.htm"
+  },
+  {
+    "id": 242,
+    "name": "*CONTACT_INTERIOR",
+    "category": "Contact",
+    "description": "Define an interior contact for each part defined in the defined set of parts.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/contact_interior_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 243,
+    "name": "*CONTACT_TIEBREAK",
+    "category": "Contact",
+    "description": "Defines tied contact between entities without failure.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/contact_tiebreak_lsdyna_r.htm"
+  },
+  {
+    "id": 244,
+    "name": "*CONTACT_NODES_TO_SURFACE",
+    "category": "Contact",
+    "description": "Define nodes to surface contact interface.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/contact_nodes_to_surface_lsdyna_r.htm"
+  },
+  {
+    "id": 245,
+    "name": "*CONTROL_OUTPUT",
+    "category": "Control",
+    "description": "Define Starter output details.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/control_output_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 246,
+    "name": "*CONTACT_TIED",
+    "category": "Contact",
+    "description": "Defines tied contact between entities.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/contact_tied_lsdyna_r.htm"
+  },
+  {
+    "id": 247,
+    "name": "*CONTROL_TERMINATION",
+    "category": "Control",
+    "description": "This keyword defines the conditions to stop a running simulation.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/control_termination_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 248,
+    "name": "*CONTROL_HOURGLASS",
+    "category": "Control",
+    "description": "Define default solid and hourglass formulation for 8-node solid elements.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/control_hourglass_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 249,
+    "name": "*CONTROL_PARALLEL",
+    "category": "Control",
+    "description": "Define parallel arithmetic option.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/control_parallel_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 250,
+    "name": "*CONTROL_TIMESTEP",
+    "category": "Control",
+    "description": "Defines time step control conditions.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/control_timestep_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 251,
+    "name": "*CONTROL_UNITS",
+    "category": "Control",
+    "description": "Defines the input file unit system.",
+    "documentation": "topics/solvers/rad/control_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 252,
+    "name": "*DAMPING_GLOBAL",
+    "category": "Damping",
+    "description": "Used to define the Rayleigh mass and stiffness damping coefficients for the entire model.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/damping_global_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 253,
+    "name": "*DAMPING_PART_STIFFNESS",
+    "category": "Damping",
+    "description": "Defines Rayleigh stiffness damping applied to a part or set of parts applied in the global coordinate system.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/damping_part_stiffness_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 254,
+    "name": "*DAMPING_RELATIVE",
+    "category": "Damping",
+    "description": "Defines the Rayleigh mass damping relative to the average velocity of the set of nodes or rigid part motion.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/damping_relative_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 255,
+    "name": "*DATABASE_BINARY_D3DUMP",
+    "category": "Database",
+    "description": "Defines the output frequency for the writing of restart files.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/database_binary_d3dump_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 256,
+    "name": "*DATABASE",
+    "category": "Database",
+    "description": "Defines the output frequency for time history data.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/database_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 257,
+    "name": "*DATABASE_BINARY_D3PLOT",
+    "category": "Database",
+    "description": "Defines the output frequency for animation files.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/database_binary_d3plot_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 258,
+    "name": "*DATABASE_BINARY_RUNRSF",
+    "category": "Database",
+    "description": "Defines the output frequency for the writing of restart files.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/database_binary_runrsf_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 259,
+    "name": "*DATABASE_BINARY_INTFOR",
+    "category": "Database",
+    "description": "Define the contact force and pressure vector and the output frequency for animation files.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/database_binary_intfor_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 260,
+    "name": "*DATABASE_CROSS_SECTION_SET",
+    "category": "Database",
+    "description": "Define a cross section to output the force and moment defined by a group of nodes and groups of elements.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/database_cross_section_set_lsdyna_r.htm"
+  },
+  {
+    "id": 261,
+    "name": "*DATABASE_CROSS_SECTION_PLANE",
+    "category": "Database",
+    "description": "Define a cross plane section to output the force and moment defined by part set.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/database_cross_section_plane_lsdyna_r.htm"
+  },
+  {
+    "id": 262,
+    "name": "*DATABASE_EXTENT_BINARY",
+    "category": "Database",
+    "description": "Define the results written in the animation output files.",
+    "documentation": "topics/solvers/rad/database_lsdyna_r.htm"
+  },
+  {
+    "id": 263,
+    "name": "*DATABASE_HISTORY",
+    "category": "Database",
+    "description": "This keyword defines which entities are output to the time history file.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/database_history_lsdyna_r.htm"
+  },
+  {
+    "id": 264,
+    "name": "*DATABASE_HISTORY_NODE",
+    "category": "Database",
+    "description": "Defines a list of nodes for output in time history file.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/database_history_node_lsdyna_r.htm"
+  },
+  {
+    "id": 265,
+    "name": "*DEFINE_COORDINATE_NODES",
+    "category": "Define",
+    "description": "Defines a nodal based moving coordinate system.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/define_coordinate_nodes_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 266,
+    "name": "*DEFINE_BOX",
+    "category": "Define",
+    "description": "Define a rectangular box in the global or local coordinate system.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/define_box_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 267,
+    "name": "*DEFINE_COORDINATE_SYSTEM",
+    "category": "Define",
+    "description": "This keyword defines a fixed coordinate system.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/define_coordinate_system_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 268,
+    "name": "*DEFINE_COORDINATE_VECTOR",
+    "category": "Define",
+    "description": "This keyword defines a local vector direction.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/define_coordinate_vector_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 269,
+    "name": "*DEFINE_CURVE",
+    "category": "Define",
+    "description": "Defines a function using tabulated input with offsets and scales.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/define_curve_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 270,
+    "name": "*DEFINE_ELEMENT_DEATH",
+    "category": "Define",
+    "description": "Define an element set to delete at a given time value.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/define_element_death_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 271,
+    "name": "*DEFINE_CURVE_SMOOTH",
+    "category": "Define",
+    "description": "Defines a simple smooth function, mainly used to impose a displacement on metal forming tool.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/define_curve_smooth_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 272,
+    "name": "*DEFINE_HEX_SPOTWELD_ASSEMBLY_{OPTION}",
+    "category": "Define",
+    "description": "Define a cluster of connection solid elements for post-processing and failure control of the solid connection element.",
+    "documentation": "topics/solvers/rad/define_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 273,
+    "name": "*DEFINE_FRICTION",
+    "category": "Define",
+    "description": "Define friction table between components.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/define_friction_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 274,
+    "name": "*DEFINE_SD_ORIENTATION",
+    "category": "Define",
+    "description": "Defines stiffness direction of discrete springs.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/define_sd_orientation_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 275,
+    "name": "*DEFINE_TABLE",
+    "category": "Define",
+    "description": "Defines a table.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/define_table_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 276,
+    "name": "*DEFINE_TABLE_2D",
+    "category": "Define",
+    "description": "This keyword defines a 2D table.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/define_table_2d_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 277,
+    "name": "*DEFINE_TABLE_3D",
+    "category": "Define",
+    "description": "Defines a 3D table.",
+    "documentation": "topics/solvers/rad/define_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 278,
+    "name": "*DEFINE_TRANSFORMATION",
+    "category": "Define",
+    "description": "Defines a node and entities transformation(s) used in *INCLUDE_TRANSFORM.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/define_transformation_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 279,
+    "name": "*DEFINE_VECTOR",
+    "category": "Define",
+    "description": "This keyword defines a local vector direction.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/define_vector_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 280,
+    "name": "*DEFINE_VECTOR_NODES",
+    "category": "Define",
+    "description": "Define a local vector direction with nodes.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/define_vector_nodes_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 281,
+    "name": "*ELEMENT_BEAM",
+    "category": "Element",
+    "description": "Defines a beam, discrete beam, or a truss element.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/element_beam_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 282,
+    "name": "*ELEMENT_MASS",
+    "category": "Element",
+    "description": "This keyword defines mass added to nodes or node sets.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/element_mass_lsdyna_r.htm"
+  },
+  {
+    "id": 283,
+    "name": "*ELEMENT_MASS_PART",
+    "category": "Element",
+    "description": "This keyword defines mass added to parts or part sets.",
+    "documentation": "topics/solvers/rad/element_lsdyna_r.htm"
+  },
+  {
+    "id": 284,
+    "name": "*ELEMENT_PLOTEL",
+    "category": "Element",
+    "description": "Defines a spring element without any stiffness for visualization.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/element_plotel_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 285,
+    "name": "*ELEMENT_DISCRETE",
+    "category": "Element",
+    "description": "Defines a 1 degree of freedom spring element.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/element_discrete_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 286,
+    "name": "*ELEMENT_SEATBELT_RETRACTOR",
+    "category": "Element",
+    "description": "Defines a 1D seat belt retractor element.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/element_seatbelt_retractor_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 287,
+    "name": "*ELEMENT_SEATBELT",
+    "category": "Element",
+    "description": "Defines a 1D seat belt element.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/element_seatbelt_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 288,
+    "name": "*ELEMENT_SEATBELT_PRETENSIONER",
+    "category": "Element",
+    "description": "Defines a 1D seat belt pretensioner element.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/element_seatbelt_pretensioner_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 289,
+    "name": "*ELEMENT_SEATBELT_ACCELEROMETER",
+    "category": "Element",
+    "description": "This keyword defines an accelerometer.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/element_seatbelt_accelerometer_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 290,
+    "name": "*ELEMENT_SHELL",
+    "category": "Element",
+    "description": "Defines a shell element with 3 or 4 nodes.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/element_shell_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 291,
+    "name": "*ELEMENT_SEATBELT_SLIPRING",
+    "category": "Element",
+    "description": "Defines a 1D or 2D seat belt slipring.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/element_seatbelt_slipring_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 292,
+    "name": "*ELEMENT_SEATBELT_SENSOR",
+    "category": "Element",
+    "description": "Defines a seat belt sensor.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/element_seatbelt_sensor_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 293,
+    "name": "*EOS_GRUNEISEN",
+    "category": "Eos",
+    "description": "Defines a Gruneisen equation of state.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/eos_gruneisen_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 294,
+    "name": "*ELEMENT_SPH",
+    "category": "Element",
+    "description": "Defines a Smooth Particle Hydrodynamic (SPH).",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/element_sph_lsdyna_r.htm"
+  },
+  {
+    "id": 295,
+    "name": "*EOS_001 (LINEAR_POLYNOMIAL)",
+    "category": "Eos",
+    "description": "Defines a linear polynomial equation of state.",
+    "documentation": "topics/solvers/rad/eos_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 296,
+    "name": "*ELEMENT_SOLID",
+    "category": "Element",
+    "description": "Defines 3-dimensional solid elements.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/element_solid_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 297,
+    "name": "*ELEMENT_TSHELL",
+    "category": "Element",
+    "description": "Defines 3-dimensional thick shell elements.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/element_tshell_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 298,
+    "name": "*INITIAL_AXIAL_FORCE_BEAM",
+    "category": "Initial",
+    "description": "Defines initial axial force applied to beams as function of time.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/initial_axial_force_beam_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 299,
+    "name": "*INCLUDE",
+    "category": "Include",
+    "description": "Defines an include file with transformation.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/include_lsdyna_r.htm"
+  },
+  {
+    "id": 300,
+    "name": "*HOURGLASS",
+    "category": "Hourglass",
+    "description": "Define solid and hourglass formulation for 8-node solid elements.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/hourglass_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 301,
+    "name": "*INCLUDE_PATH",
+    "category": "Include",
+    "description": "Defines the path(s) or the relative path(s) for the include files.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/include_path_lsdyna_r.htm"
+  },
+  {
+    "id": 302,
+    "name": "*INCLUDE_RADIOSS",
+    "category": "Include",
+    "description": "Defines an include file of Radioss format.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/include_radioss_lsdyna_r.htm"
+  },
+  {
+    "id": 303,
+    "name": "*INITIAL_FOAM_REFERENCE_GEOMETRY",
+    "category": "Initial",
+    "description": "Defines the reference state for elements belonging to a part, using given nodal coordinates.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/initial_foam_reference_geometry_lsdyna_r.htm"
+  },
+  {
+    "id": 304,
+    "name": "*INITIAL_STRAIN_SHELL",
+    "category": "Initial",
+    "description": "Initializes the strain for shell elements in the global coordinate system.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/initial_strain_shell_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 305,
+    "name": "*INITIAL_STRESS_SHELL_{OPTION}",
+    "category": "Initial",
+    "description": "Defines the reference state for elements belonging to a part, using given nodal coordinates.",
+    "documentation": "topics/solvers/rad/initial_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 306,
+    "name": "*INITIAL_STRESS_SOLID",
+    "category": "Initial",
+    "description": "Initializes the stress for solid elements in the global coordinate system.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/initial_stress_solid_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 307,
+    "name": "*INITIAL_VELOCITY",
+    "category": "Initial",
+    "description": "Defines initial velocity of a node set.",
+    "documentation": "topics/solvers/rad/initial_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 308,
+    "name": "*INITIAL_VELOCITY_NODE",
+    "category": "Initial",
+    "description": "This keyword defines an initial translational and rotational velocity of a node.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/initial_velocity_node_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 309,
+    "name": "*INITIAL_VELOCITY_RIGID_BODY",
+    "category": "Initial",
+    "description": "Define initial velocity of a rigid body.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/initial_velocity_rigid_body_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 310,
+    "name": "*INITIAL_VELOCITY_GENERATION",
+    "category": "Initial",
+    "description": "Define both translational and rotational initial velocities.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/initial_velocity_generation_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 311,
+    "name": "*LOAD_BODY_PARTS",
+    "category": "Load",
+    "description": "Describes the set of part(s) on which the load body is applied. Load body is defined with *LOAD_BODY_{OPTION}.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/load_body_parts_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 312,
+    "name": "*INTEGRATION_SHELL",
+    "category": "Integration",
+    "description": "Define user-defined through the thickness integration rules for the composite shell element.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/integration_shell_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 313,
+    "name": "*KEYWORD",
+    "category": "Keyword",
+    "description": "This keyword should always be the first card of the input file. Optionally used with *CONTROL_UNITS card to specify model units.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/keyword_lsdyna_r.htm"
+  },
+  {
+    "id": 314,
+    "name": "*LOAD_GRAVITY_PART",
+    "category": "Load",
+    "description": "Defines gravity load applied to a part or to a set of parts.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/load_gravity_part_lsdyna_r.htm"
+  },
+  {
+    "id": 315,
+    "name": "*LOAD_BODY",
+    "category": "Load",
+    "description": "Defines an acceleration load or centrifugal load.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/load_body_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 316,
+    "name": "*LOAD_SEGMENT",
+    "category": "Load",
+    "description": "Defines pressure load on a segment defined by node or by set of segments.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/load_segment_lsdyna_r.htm"
+  },
+  {
+    "id": 317,
+    "name": "*LOAD_SHELL",
+    "category": "Load",
+    "description": "Defines pressure load on a single shell element or on a set of shell elements.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/load_shell_lsdyna_r.htm"
+  },
+  {
+    "id": 318,
+    "name": "*MAT_001 (ELASTIC)",
+    "category": "Material_001",
+    "description": "Defines an isotropic, linear elastic material using Hooke\u2019s law.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 319,
+    "name": "*LOAD_RIGID_BODY",
+    "category": "Load",
+    "description": "Defines a concentrated force or moment applied on main node of a defined rigid body.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/load_rigid_body_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 320,
+    "name": "*LOAD_NODE",
+    "category": "Load",
+    "description": "Defines a concentrated force or moment applied on a defined node or to each node of a nodal set.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/load_node_lsdyna_r.htm"
+  },
+  {
+    "id": 321,
+    "name": "*MAT_006 (VISCOELASTIC)",
+    "category": "Material_006",
+    "description": "This keyword defines an isotropic, visco-elastic material. It is generally used to model incompressible rubbers, polymers, foams, and elastomers.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 322,
+    "name": "*MAT_005 (SOIL_AND_FOAM)",
+    "category": "Material_005 (Soil",
+    "description": "Defines an isotropic, elastic-plastic simple material model for representing soil, concrete, or crushable foam.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 323,
+    "name": "*MAT_002 (ORTHOTROPIC_ELASTIC)",
+    "category": "Material_002 (Orthotropic",
+    "description": "This model expresses a simple orthotropic elastic material.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 324,
+    "name": "*MAT_003 (PLASTIC_KINEMATIC)",
+    "category": "Material_003 (Plastic",
+    "description": "Defines an isotropic, elasto-plastic material with s Cowper-Symonds strain rate model.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 325,
+    "name": "*MAT_001_FLUID (ELASTIC_FLUID)",
+    "category": "Material_001",
+    "description": "Defines an isotropic, linear elastic material using Hooke\u2019s law.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 326,
+    "name": "*MAT_007 (BLATZ_KO_RUBBER)",
+    "category": "Material_007 (Blatz",
+    "description": "This keyword defines an isotropic, incompressible, Neo-Hookean hyperelastic material.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 327,
+    "name": "*MAT_009 (NULL)",
+    "category": "Material_009",
+    "description": "Defines a void material without stiffness.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 328,
+    "name": "*MAT_024 (PIECEWISE_LINEAR_PLASTICITY)",
+    "category": "Material_024 (Piecewise",
+    "description": "Defines an isotropic elasto-plastic material using tabulated stress versus plastic strain input for different strain rates.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 329,
+    "name": "*MAT_020 (RIGID)",
+    "category": "Material_020",
+    "description": "Defines a rigid material assigned to a part.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 330,
+    "name": "*MAT_018 (POWER_LAW_PLASTICITY)",
+    "category": "Material_018 (Power",
+    "description": "This model expresses isotropic plasticity model with rate effects which uses a power law hardening.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 331,
+    "name": "*MAT_012 (ISOTROPIC_ELASTIC_PLASTIC)",
+    "category": "Material_012 (Isotropic",
+    "description": "Defines an isotropic, elasto-plastic material.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 332,
+    "name": "*MAT_015 (JOHNSON_COOK)",
+    "category": "Material_015 (Johnson",
+    "description": "This model expresses material stress as a function of strain, strain rate, temperature dependency and plastic strain failure criterion.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 333,
+    "name": "*MAT_032 (LAMINATED_GLASS)",
+    "category": "Material_032 (Laminated",
+    "description": "This keyword defines a layered glass with polymeric layers material models.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 334,
+    "name": "*MAT_027 (MOONEY-RIVLIN_RUBBER)",
+    "category": "Material_027 (Mooney-Rivlin",
+    "description": "Defines a Mooney-Rivlin isotropic hyperelastic incompressible material.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 335,
+    "name": "*MAT_026 (HONEYCOMB)",
+    "category": "Material_026",
+    "description": "This keyword defines an orthotropic compressible honeycomb material.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 336,
+    "name": "*MAT_034 (FABRIC)",
+    "category": "Material_034",
+    "description": "Defines an orthotropic elastic material with softening in compression.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 337,
+    "name": "*MAT_030 (SHAPE_MEMORY)",
+    "category": "Material_030 (Shape",
+    "description": "Defines a super-elastic memory shape alloy material (SMA) compatible with integrated beam, solid and shell elements.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 338,
+    "name": "*MAT_063 (CRUSHABLE_FOAM)",
+    "category": "Material_063 (Crushable",
+    "description": "This keyword defines a crushable foam material with optional tension cutoff and elastic unloading.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 339,
+    "name": "*MAT_054 (ENHANCED_COMPOSITE_DAMAGE)",
+    "category": "Material_054 (Enhanced",
+    "description": "Defines an orthotropic shell composite material for unidirectional layers with Chang-Chang failure model.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 340,
+    "name": "*MAT_057 (LOW_DENSITY_FOAM)",
+    "category": "Material_057 (Low",
+    "description": "Defines an isotropic, visco-elastic, low density foam.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 341,
+    "name": "*MAT_061 (KELVIN_MAXWELL_VISCOELASTIC)",
+    "category": "Material_061 (Kelvin",
+    "description": "Defines an isotropic, visco-elastic material for solid elements.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 342,
+    "name": "*MAT_058 (LAMINATED_COMPOSITE_FABRIC)",
+    "category": "Material_058 (Laminated",
+    "description": "Defines an orthotropic shell composite material for unidirectional layers, complete laminates, and woven fabrics material.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 343,
+    "name": "*MAT_066 (LINEAR_ELASTIC_DISCRETE_BEAM)",
+    "category": "Material_066 (Linear",
+    "description": "This keyword defines a linear elastic discrete beam material with 6 decoupled degrees of freedom and an optional preload option.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 344,
+    "name": "*MAT_071 (CABLE_DISCRETE_BEAM)",
+    "category": "Material_071 (Cable",
+    "description": "This keyword defines an elastic cable material with no stiffness in compression.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 345,
+    "name": "*MAT_067 (NONLINEAR_ELASTIC_DISCRETE_BEAM)",
+    "category": "Material_067 (Nonlinear",
+    "description": "This keyword defines a nonlinear elastic discrete beam material with 6 decoupled DOFs with an optional preload.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 346,
+    "name": "*MAT_068 (NONLINEAR_PLASTIC_DISCRETE_BEAM)",
+    "category": "Material_068 (Nonlinear",
+    "description": "Defines a nonlinear elasto-plastic discrete beam material with 6 decoupled DOFs with an optional preload.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 347,
+    "name": "*MAT_073 (LOW_DENSITY_VISCOUS_FOAM)",
+    "category": "Material_073 (Low",
+    "description": "Defines a visco-elastic low density foam tabulated material for solid elements.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 348,
+    "name": "*MAT_077_O (OGDEN_RUBBER)",
+    "category": "Material_077",
+    "description": "Defines an isotropic, hyperelastic, viscous, and incompressible material specified using the Ogden material models.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 349,
+    "name": "*MAT_081 (PLASTICITY_WITH_DAMAGE)",
+    "category": "Material_081 (Plasticity",
+    "description": "Defines an isotropic elasto-plastic material using tabulated stress versus plastic strain input for different strain rates and simple damage model.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 350,
+    "name": "*MAT_076 (GENERAL_VISCOELASTIC)",
+    "category": "Material_076 (General",
+    "description": "Defines an isotropic, visco-elastic material. It is generally used to model incompressible elastomers.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 351,
+    "name": "*MAT_077_H (HYPERELASTIC_RUBBER)",
+    "category": "Material_077",
+    "description": "Defines an isotropic, hyperelastic, viscous, and incompressible material specified from uniaxial experimental data.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 352,
+    "name": "*MAT_074 (ELASTIC_SPRING_DISCRETE_BEAM)",
+    "category": "Material_074 (Elastic",
+    "description": "This keyword defines a nonlinear elasto-plastic discrete beam material with one DOFs and optional preload option.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 353,
+    "name": "*MAT_091 (SOFT_TISSUE)",
+    "category": "Material_091 (Soft",
+    "description": "This material is used to represent biological soft tissues such as ligaments based on Mooney-Rivlin formulation.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 354,
+    "name": "*MAT_098 (SIMPLIFIED_JOHNSON_COOK)",
+    "category": "Material_098 (Simplified",
+    "description": "Defines an isotropic elasto-plastic material using the Johnson-Cook material model.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 355,
+    "name": "*MAT_092 (SOFT_TISSUE_VISCO)",
+    "category": "Material_092 (Soft",
+    "description": "This material is used to represent biological soft tissues such as ligaments based on Mooney-Rivlin formulation.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 356,
+    "name": "*MAT_099 (SIMPLIFIED_JOHNSON_COOK_ORTHOTROPIC_DAMAGE)",
+    "category": "Material_099 (Simplified",
+    "description": "Defines an isotropic elasto-plastic material using the Johnson-Cook material model.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 357,
+    "name": "*MAT_083 (FU_CHANG_FOAM)",
+    "category": "Material_083 (Fu",
+    "description": "Defines an isotropic, highly compressible Fu Chang foam.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 358,
+    "name": "*MAT_100 (SPOTWELD)",
+    "category": "Material_100",
+    "description": "Defines an elasto-plastic spotweld material for beam element (elform=9) or solid element.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 359,
+    "name": "*MAT_119 (GENERAL_NONLINEAR_6DOF_DISCRETE_BEAM)",
+    "category": "Material_119 (General",
+    "description": "Defines a nonlinear elasto-plastic discrete beam material with 6 degrees of freedom (DOFs). Different loading and unloading behavior can be specified.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 360,
+    "name": "*MAT_105 (DAMAGE_2)",
+    "category": "Material_105 (Damage",
+    "description": "Defines an elastic viscoplastic material model.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 361,
+    "name": "*MAT_111 (JOHNSON_HOLMQUIST_CONCRETE)",
+    "category": "Material_111 (Johnson",
+    "description": "Defines a material law that is based on the theory of Johnson-Holmquist-Cook model theory (also called Johnson-Holmquist-Concrete).",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 362,
+    "name": "*MAT_123 (MODIFIED_PIECEWISE_LINEAR_PLASTICITY)",
+    "category": "Material_123 (Modified",
+    "description": "Defines an isotropic elasto-plastic material using tabulated stress versus plastic strain input for different strain rates. Material thinning and FLD failure are also included.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 363,
+    "name": "*MAT_121 (GENERAL_NONLINEAR_1DOF_DISCRETE_BEAM)",
+    "category": "Material_121 (General",
+    "description": "Defines a nonlinear elasto-plastic discrete beam material with one degree of freedom (DOF). Different loading and unloading behavior can be specified.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 364,
+    "name": "*MAT_122 (HILL_3R)",
+    "category": "Material_122 (Hill",
+    "description": "Defines an orthotropic elastoplastic material using linear or tabulated stress versus plastic strain input.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 365,
+    "name": "*MAT_124 (PLASTICITY_COMPRESSION_TENSION)",
+    "category": "Material_124 (Plasticity",
+    "description": "Defines an isotropic elasto-plastic material with tension and compression yield stress curves as a function of plastic strain.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 366,
+    "name": "*MAT_120 (GURSON)",
+    "category": "Material_120",
+    "description": "Defines a nonlinear elasto-plastic based on the Gurson constitutive law, which is used to model visco-elastic-plastic strain rate dependent porous metals.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 367,
+    "name": "*MAT_169 (ARUP_ADHESIVE)",
+    "category": "Material_169 (Arup",
+    "description": "Defines adhesive bonding material.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 368,
+    "name": "*MAT_138 (COHESIVE_MIXED_MODE)",
+    "category": "Material_138 (Cohesive",
+    "description": "This model expresses a constitutive relation of ductile adhesive materials in 2 modes for normal and tangential directions.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 369,
+    "name": "*MAT_154 (DESHPANDE_FLECK_FOAM)",
+    "category": "Material_154 (Deshpande",
+    "description": "Defines a material for modeling aluminum foam.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 370,
+    "name": "*MAT_126 (MODIFIED_HONEYCOMB)",
+    "category": "Material_126 (Modified",
+    "description": "This model expresses a three-dimension orthotropic nonlinear elasto-plastic material, usually used to model honeycomb or foam material.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 371,
+    "name": "*MAT_156 (MUSCLE)",
+    "category": "Material_156",
+    "description": "Defines a muscle model for safety applications. Used only with truss elements.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 372,
+    "name": "*MAT_177 (HILL_FOAM)",
+    "category": "Material_177 (Hill",
+    "description": "Defines a highly compressible foam based on the strain energy function proposed by Hill.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 373,
+    "name": "*MAT_187 (SAMP-1)",
+    "category": "Material_187",
+    "description": "Defines a semi-analytical model for polymers material. This is an isotropic tabulated elasto-plastic material.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 374,
+    "name": "*MAT_183 (MAT_SIMPLIFIED_RUBBER_WITH_DAMAGE)",
+    "category": "Material_183 (Mat",
+    "description": "Defines an incompressible rubber material with uniaxial tensile/compression test results as input curve. Unloading damage curve can be specified.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 375,
+    "name": "*MAT_196 (GENERAL_SPRING_DISCRETE_BEAM)",
+    "category": "Material_196 (General",
+    "description": "Defines a nonlinear elasto-plastic discrete beam material with 6 degrees of freedom.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 376,
+    "name": "*MAT_181 (SIMPLIFIED_RUBBER/FOAM)",
+    "category": "Material_181 (Simplified",
+    "description": "Defines a rubber material with uniaxial tensile/compression test results as input curve. This material can be used with solid elements only.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 377,
+    "name": "*MAT_224 (TABULATED_JOHNSON_COOK)",
+    "category": "Material_224 (Tabulated",
+    "description": "This model expresses material stress as a function of strain, strain rate, temperature dependency and plastic strain failure criterion.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 378,
+    "name": "*MAT_ADD_DAMAGE_GISSMO",
+    "category": "Material_Add",
+    "description": "Additional failure model defining the plastic strain at failure, function of stress triaxiality, strain rate, Lode angle, element size, and temperature.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/mat_add_damage_gissmo_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 379,
+    "name": "*MAT_ADD_EROSION",
+    "category": "Material_Add",
+    "description": "Defines a cumulative failure model.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/mat_add_erosion_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 380,
+    "name": "*MAT_240 (COHESIVE_MIXED_MODE_ELASTOPLASTIC_RATE)",
+    "category": "Material_240 (Cohesive",
+    "description": "Defines a perfectly plastic cohesive material with state dependency, normal and shear damage, and normal and shear failure.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 381,
+    "name": "*MAT_252 (TOUGHENED_ADHESIVE_POLYMER)",
+    "category": "Material_252 (Toughened",
+    "description": "This is a non-associated elasto-plastic model for polymer adhesives.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 382,
+    "name": "*MAT_ADD_DAMAGE_DIEM",
+    "category": "Material_Add",
+    "description": "Defines failure criteria in which damage initiation and damage evolution can be separately defined.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/mat_add_damage_diem_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 383,
+    "name": "*MAT_S01 (SPRING_ELASTIC)",
+    "category": "Material_S01 (Spring",
+    "description": "Defines a linear spring material.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 384,
+    "name": "*MAT_B01 (SEATBELT)",
+    "category": "Material_B01",
+    "description": "Defines a 1D seatbelt material.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 385,
+    "name": "*MAT_ADD_THERMAL_EXPANSION",
+    "category": "Material_Add",
+    "description": "Used to add thermal expansion property for material.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/mat_add_thermal_expansion_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 386,
+    "name": "*MAT_S02 (DAMPER_VISCOUS)",
+    "category": "Material_S02 (Damper",
+    "description": "Defines a linear damper spring material.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 387,
+    "name": "*MAT_S03 (SPRING_ELASTOPLASTIC)",
+    "category": "Material_S03 (Spring",
+    "description": "Defines an elasto-plastic spring material.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 388,
+    "name": "*MAT_S05 (DAMPER_NONLINEAR_VISCOUS)",
+    "category": "Material_S05 (Damper",
+    "description": "Defines a nonlinear damper spring material.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 389,
+    "name": "*MAT_S04 (SPRING_NONLINEAR_ELASTIC)",
+    "category": "Material_S04 (Spring",
+    "description": "Defines a nonlinear elastic spring material.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 390,
+    "name": "*MAT_S06 (SPRING_GENERAL_NONLINEAR)",
+    "category": "Material_S06 (Spring",
+    "description": "Defines a nonlinear spring material with loading and unloading options.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 391,
+    "name": "*MAT_S08 (SPRING_INELASTIC)",
+    "category": "Material_S08 (Spring",
+    "description": "Defines a nonlinear spring material with stiffness available only in tension or in compression.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 392,
+    "name": "*MAT_S15 (SPRING_MUSCLE)",
+    "category": "Material_S15 (Spring",
+    "description": "Defines a muscle model for discrete elements.",
+    "documentation": "topics/solvers/rad/mat_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 393,
+    "name": "*NODE_TRANSFORM",
+    "category": "Node",
+    "description": "Defines a node coordinate transformation applied on a set of nodes.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/node_transform_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 394,
+    "name": "*PART_COMPOSITE",
+    "category": "Part",
+    "description": "Defines a part for composite application that contains material and ply information.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/part_composite_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 395,
+    "name": "*PART",
+    "category": "Part",
+    "description": "Defines a part, which combines material and property information.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/part_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 396,
+    "name": "*NODE",
+    "category": "Node",
+    "description": "Defines a node number and nodal coordinates in the global coordinate system.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/node_lsdyna_r.htm"
+  },
+  {
+    "id": 397,
+    "name": "*RIGIDWALL_GEOMETRIC",
+    "category": "Rigidwall",
+    "description": "Define a rigid wall with the different following shape.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/rigidwall_geometric_lsdyna_r.htm"
+  },
+  {
+    "id": 398,
+    "name": "*SECTION_SEATBELT",
+    "category": "Section",
+    "description": "Defines finite element property of seatbelt elements.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/section_seatbelt_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 399,
+    "name": "*SECTION_DISCRETE",
+    "category": "Section",
+    "description": "This keyword defines finite element property of spring elements.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/section_discrete_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 400,
+    "name": "*SECTION_SHELL",
+    "category": "Section",
+    "description": "Defines the shell element properties.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/section_shell_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 401,
+    "name": "*RIGIDWALL_PLANAR",
+    "category": "Rigidwall",
+    "description": "This keyword defines a planar rigid wall kinematic condition.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/rigidwall_planar_lsdyna_r.htm"
+  },
+  {
+    "id": 402,
+    "name": "*SECTION_BEAM",
+    "category": "Section",
+    "description": "Defines finite element property of beams, trusses, and discrete beams.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/section_beam_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 403,
+    "name": "*SECTION_SOLID",
+    "category": "Section",
+    "description": "Defines the finite element properties of solid elements.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/section_solid_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 404,
+    "name": "*SET_BEAM_ADD",
+    "category": "Set",
+    "description": "Defines a set of beam elements based on a list of set of beam elements.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/set_beam_add_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 405,
+    "name": "*SECTION_TSHELL",
+    "category": "Section",
+    "description": "Defines the finite element properties of thick shell elements.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/section_tshell_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 406,
+    "name": "*SET_BEAM_INTERSECT",
+    "category": "Set",
+    "description": "This keyword defines a set from the intersection of set lists of beam elements.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/set_beam_intersect_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 407,
+    "name": "*SET_BEAM",
+    "category": "Set",
+    "description": "This keyword defines a set of beams based on a list of beams in various ways.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/set_beam_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 408,
+    "name": "*SET_NODE_ADD",
+    "category": "Set",
+    "description": "This keyword defines a set of nodes from a list of existing sets.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/set_node_add_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 409,
+    "name": "*SET_DISCRETE_INTERSECT",
+    "category": "Set",
+    "description": "This keyword defines a set of from the intersection of set lists of discrete elements.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/set_discrete_intersect_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 410,
+    "name": "*SET_NODE",
+    "category": "Set",
+    "description": "Defines a set of nodes based on a list of nodes in various ways.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/set_node_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 411,
+    "name": "*SET_DISCRETE_ADD",
+    "category": "Set",
+    "description": "Defines a set of discrete elements based on a list of set of discrete elements.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/set_discrete_add_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 412,
+    "name": "*SET_DISCRETE",
+    "category": "Set",
+    "description": "Defines a set of springs based on a list of springs in various ways.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/set_discrete_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 413,
+    "name": "*SET_SEGMENT_ADD",
+    "category": "Set",
+    "description": "Defines a set of segments based on a list of set of segments.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/set_segment_add_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 414,
+    "name": "*SET_PART",
+    "category": "Set",
+    "description": "Defines a set of parts based on a list or generates a list by specifying a range of part IDs.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/set_part_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 415,
+    "name": "*SET_NODE_INTERSECT",
+    "category": "Set",
+    "description": "This keyword defines a set from the intersection of set lists of nodes.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/set_node_intersect_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 416,
+    "name": "*SET_PART_ADD",
+    "category": "Set",
+    "description": "This keyword defines a set of parts from a list of existing part sets.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/set_part_add_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 417,
+    "name": "*SET_SEGMENT",
+    "category": "Set",
+    "description": "Defines a surface defined by 3 or 4 node segments.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/set_segment_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 418,
+    "name": "*SET_SEGMENT_INTERSECT",
+    "category": "Set",
+    "description": "This keyword defines a set from the intersection of set lists of segments.",
+    "documentation": "topics/solvers/rad/set_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 419,
+    "name": "*SET_SHELL",
+    "category": "Set",
+    "description": "This keyword defines a set of shells based on a list of shells in various ways.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/set_shell_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 420,
+    "name": "*SET_SOLID",
+    "category": "Set",
+    "description": "This keyword defines a set of solids based on a list of solids in various ways.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/set_solid_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 421,
+    "name": "*SET_SHELL_ADD",
+    "category": "Set",
+    "description": "Defines a set of shell elements based on a list of set of shell elements.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/set_shell_add_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 422,
+    "name": "*SET_SHELL_INTERSECT",
+    "category": "Set",
+    "description": "This keyword defines a set from the intersection of set lists of shell elements.",
+    "documentation": "topics/solvers/rad/set_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 423,
+    "name": "*SET_SOLID_INTERSECT",
+    "category": "Set",
+    "description": "This keyword defines a set from the intersection of set lists of solid elements.",
+    "documentation": "topics/solvers/rad/set_lsdyna_r.htm",
+    "parameters": []
+  },
+  {
+    "id": 424,
+    "name": "*SET_SOLID_ADD",
+    "category": "Set",
+    "description": "Defines a set of solid elements based on a list of sets of solid elements.",
+    "documentation": "https://help.altair.com/hwsolvers/rad/topics/solvers/rad/set_solid_add_lsdyna_r.htm",
+    "parameters": []
+  }
+]

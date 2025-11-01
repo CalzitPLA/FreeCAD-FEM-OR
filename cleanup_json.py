@@ -11,11 +11,11 @@ base_dir = Path(__file__).parent.absolute()
 
 # JSON files to keep (relative to base_dir)
 FILES_TO_KEEP = {
-    'templates.json',
-    'ls_dyna_syntax_user_friendly.json',
-    'gui/ls_dyna_syntax_user_friendly.json',
-    'gui/openradioss_keywords_clean.json',
-    'gui/openradioss_keywords_with_parameters.json',
+    'gui/json/templates.json',
+    'gui/json/ls_dyna_syntax_user_friendly.json',
+    'gui/json/openradioss_keywords_clean.json',
+    'gui/json/openradioss_keywords_with_parameters.json',
+    'gui/json/combined_keywords.json'
 }
 
 # File patterns to remove

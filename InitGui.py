@@ -67,20 +67,83 @@ class FEMORWorkbench(Workbench):
         self.__class__.ToolTip = "FEMOR - Finite Element Modeling and Analysis"
 
     def Initialize(self):
-        # Load modules
+        """This function is called when the workbench is first activated.
+        It is executed once in a FreeCAD session followed by the Activated function.
+        """
+        # Import required modules
         import Fem
         import FemGui
-        import femcommands.commands
-        from femcommands.open_cache_viewer import OpenCacheViewer
-        from femutils.nodeset_extractor import _import_gui
-
-        # Register the commands
-        FreeCADGui.addCommand('FEM_OpenCacheViewer', OpenCacheViewer())
+        from PySide import QtCore
         
-        # Get the command class using the import function to avoid circular imports
-        NodesetExtractorCommand = _import_gui()
-        if NodesetExtractorCommand is not None:
-            FreeCADGui.addCommand('FEM_NodesetExtractor', NodesetExtractorCommand())
+        # Import command modules
+        try:
+            import femcommands.commands
+            from femcommands.open_cache_viewer import OpenCacheViewer
+            from femcommands.manager import CommandManager
+            from femcommands import command_keyword_editor
+            
+            # Store QtCore as a class variable for later use
+            self.QtCore = QtCore
+            
+            # Add the keyword editor command to the toolbar
+            self.appendToolbar("FEM", ["FEM_KeywordEditor"])
+            
+            # Try to add other standard FEM commands if available
+            try:
+                if hasattr(CommandManager, 'get_workbench_commands'):
+                    self.appendToolbar("FEM", CommandManager.get_workbench_commands())
+                else:
+                    # Fallback if get_workbench_commands doesn't exist
+                    self.appendToolbar("FEM", ["FEM_Analysis", "FEM_SolverCalculixCxxtools"])
+            except Exception as e:
+                print(f"Warning: Could not load standard FEM commands: {str(e)}")
+                
+            # Register the commands
+            FreeCADGui.addCommand('FEM_OpenCacheViewer', OpenCacheViewer())
+            
+            # Import nodeset extractor if available
+            try:
+                from femutils.nodeset_extractor import _import_gui
+                NodesetExtractorCommand = _import_gui()
+                if NodesetExtractorCommand is not None:
+                    FreeCADGui.addCommand('FEM_NodesetExtractor', NodesetExtractorCommand())
+            except ImportError as e:
+                print(f"Warning: Could not load nodeset extractor: {str(e)}")
+            except Exception as e:
+                print(f"Error initializing nodeset extractor: {str(e)}")
+                
+        except Exception as e:
+            print(f"Error initializing FEM commands: {str(e)}")
+
+        # add imports for nodeset extractor
+        try:
+            from PySide import QtCore, QtGui
+            
+            def add_nodeset_extractor_to_fem():
+                """Add nodeset extractor to FEM workbench"""
+                try:
+                    # Import here to avoid circular imports
+                    from femutils.nodeset_extractor import _import_gui
+                    
+                    # Get the command class
+                    NodesetExtractorCommand = _import_gui()
+                    if NodesetExtractorCommand is not None:
+                        # Add the command
+                        FreeCADGui.addCommand('FEM_NodesetExtractor', NodesetExtractorCommand())
+                        print("Added FEM_NodesetExtractor command")
+                except ImportError as e:
+                    print(f"Warning: Could not load nodeset extractor: {str(e)}")
+                except Exception as e:
+                    import traceback
+                    print(f"Error initializing nodeset extractor: {str(e)}\n{traceback.format_exc()}")
+            
+            # Add the command after a short delay to ensure GUI is fully loaded
+            timer = QtCore.QTimer()
+            timer.singleShot(1000, add_nodeset_extractor_to_fem)
+            
+        except Exception as e:
+            import traceback
+            print(f"Error initializing nodeset extractor: {str(e)}\n{traceback.format_exc()}")
 
         FreeCADGui.addPreferencePage(":/ui/DlgSettingsNetgen.ui", "FEM")
         FreeCADGui.addPreferencePage("/home/nemo/Dokumente/Sandbox/Fem_upgraded/Resources/ui/DlgSettingsFem.ui", "FEM_upgraded")
