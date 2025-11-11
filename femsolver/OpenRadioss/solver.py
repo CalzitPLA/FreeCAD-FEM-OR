@@ -445,7 +445,20 @@ class Proxy(solverbase.Proxy, _BaseSolverOpenRadioss):
         return k_file
 
 class ViewProxy(solverbase.ViewProxy):
-    pass
+    """Proxy for the ViewProvider of the solver object."""
+
+    def getIcon(self):
+        return ":/icons/fem-solver.svg"
+
+    def setEdit(self, vobj, mode=0):
+        from femtaskpanels import task_solver_openradioss
+        task = task_solver_openradioss._TaskPanel(vobj.Object)
+        FreeCADGui.Control.showDialog(task)
+        return True
+
+    def unsetEdit(self, vobj, mode=0):
+        FreeCADGui.Control.closeDialog()
+        return True
 
 
 """

@@ -129,39 +129,21 @@ def extract_nodesets(analysis, mesh_obj):
     Returns:
         dict: Dictionary with nodeset name as key and node IDs as value
     """
-    from .nodeset_utils import extract_nodes_from_references, log_message
-    
     nodesets = {}
-    constraint_type = 'Fem::ConstraintForce'
-    nodeset_prefix = 'force_'
     
     # Find all force constraints in the analysis
     force_constraints = [obj for obj in analysis.Group 
                        if hasattr(obj, 'TypeId') and 
-                       obj.TypeId == constraint_type]
-    
-    log_message('DEBUG', f'Found {len(force_constraints)} {constraint_type} constraints')
+                       obj.TypeId == 'Fem::ConstraintForce']
     
     for constraint in force_constraints:
-        nodeset_name = f"{nodeset_prefix}{constraint.Name}"
-        log_message('DEBUG', f'Processing constraint: {constraint.Name} ({constraint.TypeId})')
+        nodeset_name = f"force_{constraint.Name}"
         
         # Get nodes from the constraint references
-        if not hasattr(constraint, 'References') or not constraint.References:
-            log_message('WARNING', f'Constraint {constraint.Name} has no references')
-            continue
-            
-        node_ids = extract_nodes_from_references(
-            constraint.References, 
-            mesh_obj, 
-            log_prefix=f'[{constraint_type}] {constraint.Name} - '
-        )
-        
-        if node_ids:
-            nodesets[nodeset_name] = ",".join(map(str, sorted(node_ids)))
-            log_message('DEBUG', f'Extracted {len(node_ids)} nodes for {nodeset_name}')
-        else:
-            log_message('WARNING', f'No nodes found for constraint {constraint.Name}')
+        if hasattr(constraint, 'References') and constraint.References:
+            node_ids = extract_nodes_from_references(constraint.References, mesh_obj, log_prefix=f"[ForceConstraint {constraint.Name}] ")
+            if node_ids:
+                nodesets[nodeset_name] = ",".join(map(str, sorted(node_ids)))
     
     return nodesets
 

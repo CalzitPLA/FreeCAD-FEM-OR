@@ -1,0 +1,727 @@
+{
+  "ATTRIBUTES": {
+    "secondaryentityids": {
+      "type": "SETS",
+      "description": "Secondary Surface Type"
+    },
+    "SECONDARY_SURF": {
+      "type": "SETS",
+      "description": "Secondary set segment"
+    },
+    "SECONDARY_GRSHEL": {
+      "type": "SETS",
+      "description": "Secondary set shell"
+    },
+    "SECONDARY_GRPART": {
+      "type": "SETS",
+      "description": "Secondary set part"
+    },
+    "SECONDARY_PART": {
+      "type": "COMPONENT",
+      "description": "Secondary part ID"
+    },
+    "SECONDARY_GRPART_EXEMPTED": {
+      "type": "SETS",
+      "description": "Secondary set exempted part"
+    },
+    "MAIN_SURF": {
+      "type": "SETS",
+      "description": "Main set segment"
+    },
+    "MAIN_GRSHEL": {
+      "type": "SETS",
+      "description": "Main set shell"
+    },
+    "MAIN_GRPART": {
+      "type": "SETS",
+      "description": "Main set part"
+    },
+    "MAIN_PART": {
+      "type": "COMPONENT",
+      "description": "Main part ID"
+    },
+    "SECONDARY": {
+      "type": "SETS",
+      "description": "[SSID]Secondary surface"
+    },
+    "SECONDARY_DEFINE_BOX_RESTRICTING": {
+      "type": "DEFINE_BOX",
+      "description": "Secondary box"
+    },
+    "MAIN": {
+      "type": "SETS",
+      "description": "[MSID]Main surface"
+    },
+    "MAIN_DEFINE_BOX_RESTRICTING": {
+      "type": "DEFINE_BOX",
+      "description": "Main box"
+    },
+    "SECONDARY_ID": {
+      "type": "INT",
+      "description": "Secondary Surface ID"
+    },
+    "MAIN_ID": {
+      "type": "INT",
+      "description": "Main Surface ID"
+    },
+    "MAIN_TYPE": {
+      "type": "INT",
+      "description": "Main Surface Type"
+    },
+    "SECONDARY_TYPE": {
+      "type": "INT",
+      "description": "Secondary Surface Type"
+    },
+    "SPR": {
+      "type": "INT",
+      "description": "Secondary side for interface force: 0 not included/ 1 Included"
+    },
+    "MPR": {
+      "type": "INT",
+      "description": "Main side for interface force: 0 not included/ 1 Included"
+    },
+    "KEYWORD_STR": {
+      "type": "STRING",
+      "description": "Solver Keyword"
+    },
+    "ContactOption": {
+      "type": "INT",
+      "description": "Options"
+    },
+    "mppOpt": {
+      "type": "INT",
+      "description": "mppoption"
+    },
+    "Option1": {
+      "type": "INT",
+      "description": "OptionalCard"
+    },
+    "TRACKPEN": {
+      "type": "INT",
+      "description": "Ignore initial penetrations"
+    },
+    "BUCKET": {
+      "type": "INT",
+      "description": "Bucketsort frequency"
+    },
+    "LCBUCKET": {
+      "type": "INT",
+      "description": "Loadcurve for bucketsort frequency"
+    },
+    "NSEG2TRACK": {
+      "type": "INT",
+      "description": "Number of potential contacts"
+    },
+    "INITITER": {
+      "type": "INT",
+      "description": "Number of iterations"
+    },
+    "LSD_PARMAX": {
+      "type": "FLOAT",
+      "description": "Parametric extension distance"
+    },
+    "LSD_CPARM8": {
+      "type": "INT",
+      "description": "Exclude beam to beam contact"
+    },
+    "LSD_CHKSEGS": {
+      "type": "INT",
+      "description": "Segment check at time zero"
+    },
+    "LSD_PENSF": {
+      "type": "FLOAT",
+      "description": "Penetration scale factor"
+    },
+    "LSD_GRPABLE": {
+      "type": "INT",
+      "description": "Activate beta algorithm"
+    },
+    "ContSecondaryBoxId": {
+      "type": "DEFINE_BOX",
+      "description": "SBOXID"
+    },
+    "ContMainBoxId": {
+      "type": "DEFINE_BOX",
+      "description": "MBOXID"
+    },
+    "LSDYNA_SPR": {
+      "type": "INT",
+      "description": "Secondary side for interface force: 0 not included/ 1 Included"
+    },
+    "LSDYNA_MPR": {
+      "type": "INT",
+      "description": "Main side for interface force: 0 not included/ 1 Included"
+    },
+    "LSDYNA_FS": {
+      "type": "FLOAT",
+      "description": "Static coeff. of friction"
+    },
+    "LSDYNA_FD": {
+      "type": "FLOAT",
+      "description": "Dynamic coeff. of friction"
+    },
+    "LSDYNA_DC": {
+      "type": "FLOAT",
+      "description": "Exponential decay coefficient"
+    },
+    "LSDYNA_VC": {
+      "type": "FLOAT",
+      "description": "Coefficient for viscous friction"
+    },
+    "LSDYNA_VDC": {
+      "type": "FLOAT",
+      "description": "Viscous Damping coeff. (\\% of critical)"
+    },
+    "LSDYNA_PENCHK": {
+      "type": "INT",
+      "description": "Small penetration search"
+    },
+    "LSDYNA_BT": {
+      "type": "FLOAT",
+      "description": "Birth Time"
+    },
+    "LSDYNA_DT": {
+      "type": "FLOAT",
+      "description": "Death Time"
+    },
+    "LSDYNA_SFS": {
+      "type": "FLOAT",
+      "description": "Scale Factor Secondary Stiffness"
+    },
+    "LSDYNA_SFM": {
+      "type": "FLOAT",
+      "description": "Scale Factor Main Stiffness"
+    },
+    "LSDYNA_SST": {
+      "type": "FLOAT",
+      "description": "Optional Secondary Thickness"
+    },
+    "LSDYNA_MST": {
+      "type": "FLOAT",
+      "description": "Optional Main Thickness"
+    },
+    "LSDYNA_SFST": {
+      "type": "FLOAT",
+      "description": "Secondary Scale Factor Thickness"
+    },
+    "LSDYNA_SFMT": {
+      "type": "FLOAT",
+      "description": "Main Scale Factor Thickness"
+    },
+    "LSDYNA_FSF": {
+      "type": "FLOAT",
+      "description": "Coulomb Friction Scale Factor"
+    },
+    "LSDYNA_VSF": {
+      "type": "FLOAT",
+      "description": "Viscous friction scale factor"
+    },
+    "LSD_LCID2": {
+      "type": "FUNCT",
+      "description": "LCIDAB"
+    },
+    "LSD_LCID": {
+      "type": "FUNCT",
+      "description": "Curve for bucket sorting frequency vs time (BSORT fun)"
+    },
+    "CONT_DPFRAC_entity": {
+      "type": "FUNCT",
+      "description": "Curve defining DPRFAC vs time"
+    },
+    "CONT_DTSIF_entity": {
+      "type": "FUNCT",
+      "description": "Curve defining DTSTIF vs time"
+    },
+    "Group_Option": {
+      "type": "INT",
+      "description": "AdditionalCards"
+    },
+    "ContactOptionalCards": {
+      "type": "INT",
+      "description": "Cards"
+    },
+    "LSDYNA_SOFT": {
+      "type": "INT",
+      "description": "Soft constraint option"
+    },
+    "LSDYNA_SOFSCL": {
+      "type": "FLOAT",
+      "description": "Scale factor for constraint forces"
+    },
+    "LSDYNA_MAXPAR": {
+      "type": "FLOAT",
+      "description": "Maximum parametric coordinate"
+    },
+    "LSDYNA_PENTOL": {
+      "type": "FLOAT",
+      "description": "Segment-based contact options"
+    },
+    "LSD_DEPTHOpt": {
+      "type": "INT",
+      "description": "Flag for sign DEPTH"
+    },
+    "LSDYNA_DEPTH": {
+      "type": "INT",
+      "description": "Search depth in automatic contact"
+    },
+    "LSD_BSORTOpt": {
+      "type": "INT",
+      "description": "Flag for sign BSORT"
+    },
+    "LSDYNA_BSORT": {
+      "type": "INT",
+      "description": "Number of cycles between bucket sorts BSORT"
+    },
+    "LSDYNA_FRCFRQ": {
+      "type": "INT",
+      "description": "Number of cycles for penalty contacts"
+    },
+    "LSD_PENMAX": {
+      "type": "FLOAT",
+      "description": "Maximum penetration distance"
+    },
+    "LSD_THKOPT": {
+      "type": "INT",
+      "description": "Thickness option"
+    },
+    "LSD_SHLTHK": {
+      "type": "INT",
+      "description": "Shell thickness option"
+    },
+    "LSD_ISYM": {
+      "type": "INT",
+      "description": "Symmetry plane option"
+    },
+    "LSD_I2D3D": {
+      "type": "INT",
+      "description": "Segment searching option"
+    },
+    "LSD_SLDTHK": {
+      "type": "FLOAT",
+      "description": "Solid element thickness"
+    },
+    "LSD_SNLOG": {
+      "type": "INT",
+      "description": "Disable shooting node logic in thickness offset contact"
+    },
+    "LSD_SLDSTF": {
+      "type": "FLOAT",
+      "description": "Solid element stiffness"
+    },
+    "CONT_IGAP": {
+      "type": "INT",
+      "description": "Flag to improve implicit convergence behavior"
+    },
+    "CONT_IGNORE": {
+      "type": "INT",
+      "description": "Ignore initial penetrations in *CONTACT"
+    },
+    "CONT_DPFRAC_chkbox": {
+      "type": "INT",
+      "description": "Use DPRFAC function"
+    },
+    "CONT_DPFRAC_field": {
+      "type": "FLOAT",
+      "description": "Depth of penetration reduction factor"
+    },
+    "CONT_DTSIF_chkbox": {
+      "type": "INT",
+      "description": "Use DTSTIF function"
+    },
+    "CONT_DTSIF_field": {
+      "type": "FLOAT",
+      "description": "Time step used in stiffness calculation"
+    },
+    "CONT_FLANGL": {
+      "type": "FLOAT",
+      "description": "Angle tolerance in radians"
+    },
+    "CONT_CID_RCF": {
+      "type": "SYSTEM",
+      "description": "Coordinate system in which to output RCFORC force resultants"
+    },
+    "CONT_Q2TRI": {
+      "type": "INT",
+      "description": "Option to split quadrilateral contacts segments into two triangles"
+    },
+    "CONT_DTPCHK": {
+      "type": "FLOAT",
+      "description": "Time interval between shell penetration reports"
+    },
+    "CONT_SFNBR": {
+      "type": "FLOAT",
+      "description": "Scale factor for neighbor segment contact"
+    },
+    "CONT_FNLSCL": {
+      "type": "FLOAT",
+      "description": "Scale factor for nonlinear force scaling"
+    },
+    "CONT_DNLSCL": {
+      "type": "FLOAT",
+      "description": "Distance factor for nonlinear force scaling"
+    },
+    "CONT_TCSO": {
+      "type": "INT",
+      "description": "Option to consider only contact segments (not all attached elements) when computing the contact thickness for a node or a segment"
+    },
+    "CONT_TIEDID": {
+      "type": "INT",
+      "description": "Incremental displacement update for tied contacts"
+    },
+    "CONT_SHLEDG": {
+      "type": "INT",
+      "description": "Flag for assuming edge shape for shells when measuring penetration. (available for segmentbased on contact)"
+    },
+    "CONT_SHAREC": {
+      "type": "INT",
+      "description": "Shared constraint flag (only available for segment based contact)"
+    },
+    "LSD_CPARM8_E": {
+      "type": "INT",
+      "description": "This is similar to CPARM8 in *CONTACT_..._MPP which is applicable only to MPP"
+    },
+    "LSD_IPBACK_E": {
+      "type": "INT",
+      "description": "This option applies to constrained tied contacts only"
+    },
+    "LSD_SRNDE": {
+      "type": "INT",
+      "description": "Segment Rounded Edges"
+    },
+    "LSD_LCID6": {
+      "type": "FUNCT",
+      "description": "Curve for searching depth vs time"
+    },
+    "CARD_D_EXISTS": {
+      "type": "INT",
+      "description": "Write optional card D"
+    },
+    "Q2TRI": {
+      "type": "INT",
+      "description": "Option to split quadrilateral contacts segments into two triangles"
+    },
+    "DTPCHK": {
+      "type": "FLOAT",
+      "description": "Time interval between shell penetration reports"
+    },
+    "CARD_A_EXISTS": {
+      "type": "INT",
+      "description": "Write optional card A"
+    },
+    "CARD_B_EXISTS": {
+      "type": "INT",
+      "description": "Write optional card B"
+    },
+    "CARD_C_EXISTS": {
+      "type": "INT",
+      "description": "Write optional card C"
+    },
+    "CARD_E_EXISTS": {
+      "type": "INT",
+      "description": "Write optional card E"
+    },
+    "NoneOption": {
+      "type": "INT",
+      "description": "Options"
+    },
+    "AutoOption": {
+      "type": "INT",
+      "description": "Automatic Options"
+    },
+    "FailureOption": {
+      "type": "INT",
+      "description": "Failure"
+    },
+    "offset_option": {
+      "type": "INT",
+      "description": "Offset Options"
+    },
+    "formingOption": {
+      "type": "INT",
+      "description": "Forming Options"
+    },
+    "LSD_LCID4": {
+      "type": "FUNCT",
+      "description": "LCID1"
+    },
+    "LSD_LCID5": {
+      "type": "FUNCT",
+      "description": "LCID2"
+    },
+    "LSD_MTCJ": {
+      "type": "INT",
+      "description": "The method option for the gap function"
+    },
+    "LSD_ALPHA": {
+      "type": "FLOAT",
+      "description": "Key amplitude parameter A"
+    },
+    "LSD_BETA": {
+      "type": "FLOAT",
+      "description": "Key frequency parameter B"
+    },
+    "LSD_TSVX": {
+      "type": "FLOAT",
+      "description": "X component of the free sliding direction Tslide"
+    },
+    "LSD_TSVY": {
+      "type": "FLOAT",
+      "description": "Y component of the free sliding direction Tslide"
+    },
+    "LSD_TSVZ": {
+      "type": "FLOAT",
+      "description": "Z component of the free sliding direction Tslide"
+    },
+    "LSD_RESPONSE": {
+      "type": "INT",
+      "description": "Response"
+    },
+    "LSDYNA_NFLS": {
+      "type": "FLOAT",
+      "description": "Normal failure stress"
+    },
+    "LSDYNA_SFLS": {
+      "type": "FLOAT",
+      "description": "Shear failure stress"
+    },
+    "LSD_PARAM": {
+      "type": "FLOAT",
+      "description": "PARAM"
+    },
+    "LSD_ERATEN": {
+      "type": "FLOAT",
+      "description": "Normal energy release rate used in damage calculation"
+    },
+    "LSD_ERATES": {
+      "type": "FLOAT",
+      "description": "Shear energy release rate used in damage calculation"
+    },
+    "LSD_CT2CN": {
+      "type": "FLOAT",
+      "description": "Ratio of the tangential stiffness to the normal stiffness"
+    },
+    "LSD_DMP_1": {
+      "type": "FLOAT",
+      "description": "Mode 1 damping force per unit volume per unit area"
+    },
+    "LSD_DMP_2": {
+      "type": "FLOAT",
+      "description": "Mode 2 damping force per unit volume per unit area"
+    },
+    "LSD_DMP_3": {
+      "type": "FLOAT",
+      "description": "Mode 3 damping force per unit volume per unit area"
+    },
+    "LSD_CN": {
+      "type": "FLOAT",
+      "description": "Normal stiffness"
+    },
+    "DefineFrictOpt": {
+      "type": "INT",
+      "description": "UseFrictionOptions"
+    },
+    "LSDYNA_FD_DefineFriction": {
+      "type": "FUNCT",
+      "description": "Table for function of Coefficient of Friction"
+    },
+    "ThermalOpt": {
+      "type": "INT",
+      "description": "Thermal Option"
+    },
+    "CF": {
+      "type": "FLOAT",
+      "description": "Thermal conductivity of fluid between the slide surfaces"
+    },
+    "FRAD": {
+      "type": "FLOAT",
+      "description": "Radiation factor"
+    },
+    "HTC": {
+      "type": "FLOAT",
+      "description": "Heat transfer conductance for closed gaps"
+    },
+    "GCRIT": {
+      "type": "FLOAT",
+      "description": "Critical gap"
+    },
+    "GMAX": {
+      "type": "FLOAT",
+      "description": "No thermal contact if gap is greater than this value"
+    },
+    "CD_FACT": {
+      "type": "FLOAT",
+      "description": "A multiplier used on the element characteristic dist for the search routine"
+    },
+    "LSD_BC_FLAG": {
+      "type": "INT",
+      "description": "Thermal boundary condition flag"
+    },
+    "LSD_ALGO": {
+      "type": "INT",
+      "description": "Contact algorithm type"
+    },
+    "LSD_LCFST": {
+      "type": "FUNCT",
+      "description": "Load curve id for static coeff. of friction"
+    },
+    "LSD_LCFDT": {
+      "type": "FUNCT",
+      "description": "Load curve id for dynamic coeff. of friction"
+    },
+    "LSD_FORMULA": {
+      "type": "INT",
+      "description": "Formula that defines the contact heat conductance"
+    },
+    "LSD_a": {
+      "type": "FUNCT",
+      "description": "Load curve id for coeff 'a'"
+    },
+    "LSD_b": {
+      "type": "FUNCT",
+      "description": "Load curve id for coeff 'b'"
+    },
+    "LSD_c": {
+      "type": "FUNCT",
+      "description": "Load curve id for coeff 'c'"
+    },
+    "LSD_d": {
+      "type": "FUNCT",
+      "description": "Load curve id for coeff 'd'"
+    },
+    "LSD_NEGATIVEOpt": {
+      "type": "INT",
+      "description": "Negative_LCH_Option"
+    },
+    "OrthoFrictionOption": {
+      "type": "INT",
+      "description": "OrthoFrictionOption"
+    },
+    "CAGOption": {
+      "type": "INT",
+      "description": "Contac Automatic General Opt"
+    }
+  },
+  "DEFAULTS": {
+    "BUCKET": 200,
+    "NSEG2TRACK": 3,
+    "INITITER": 2,
+    "LSD_PARMAX": 1.0005,
+    "LSD_PENSF": 0.99,
+    "LSDYNA_DT": "1.0E+20",
+    "LSDYNA_SFS": 1.0,
+    "LSDYNA_SFM": 1.0,
+    "LSDYNA_SFST": 1.0,
+    "LSDYNA_SFMT": 1.0,
+    "LSDYNA_FSF": 1.0,
+    "LSDYNA_VSF": 1.0,
+    "LSDYNA_SOFSCL": 0.1,
+    "LSDYNA_MAXPAR": 1.025,
+    "LSDYNA_DEPTH": 2
+  },
+  "FORMAT": {
+    "format_type": null,
+    "cards": [
+      {
+        "format": "%10d%10d%10d%10d%10d%10lg          %10d\", TRACKPEN,BUCKET,LCBUCKET,NSEG2TRACK,INITITER,LSD_PARMAX,LSD_CPARM8",
+        "parameters": [
+          ";"
+        ],
+        "comment": "CARD id and title",
+        "header": ""
+      },
+      {
+        "format": "&         %10d%10lg%10d\",LSD_CHKSEGS,LSD_PENSF,LSD_GRPABLE",
+        "parameters": [
+          ";"
+        ],
+        "comment": "2nd MPP card (optional)",
+        "header": ""
+      },
+      {
+        "format": "%10d%10d%10d%10d%10d%10d\",secondaryentityids,SECONDARY_TYPE,ContSecondaryBoxId,ContMainBoxId,LSDYNA_SPR,LSDYNA_MPR",
+        "parameters": [
+          ";"
+        ],
+        "comment": "",
+        "header": ""
+      },
+      {
+        "format": "%10lg%10lg%10lg%10lg%10lg%10d%10lg%10lg\",LSDYNA_FS, LSDYNA_FD_DefineFriction,LSDYNA_DC,LSDYNA_VC,LSDYNA_VDC,LSDYNA_PENCHK,LSDYNA_BT,LSDYNA_DT",
+        "parameters": [
+          ";"
+        ],
+        "comment": "",
+        "header": ""
+      },
+      {
+        "format": "%10lg%10lg%10lg%10lg%10lg%10d%10lg%10lg\",LSDYNA_FS, LSDYNA_FD,LSDYNA_DC,LSDYNA_VC,LSDYNA_VDC,LSDYNA_PENCHK,LSDYNA_BT,LSDYNA_DT",
+        "parameters": [
+          ";"
+        ],
+        "comment": "",
+        "header": ""
+      },
+      {
+        "format": "%10lg%10lg%10lg%10lg%10lg%10lg%10lg%10lg\",LSDYNA_SFS, LSDYNA_SFM,LSDYNA_SST,LSDYNA_MST,LSDYNA_SFST,LSDYNA_SFMT,LSDYNA_FSF,LSDYNA_VSF",
+        "parameters": [
+          ";"
+        ],
+        "comment": "",
+        "header": ""
+      }
+    ],
+    "subobjects": [],
+    "assignments": [
+      {
+        "variable": "CARD_A_EXISTS",
+        "value": "1",
+        "mode": "EXPORT"
+      },
+      {
+        "variable": "ContactOptionalCards",
+        "value": "1",
+        "mode": "IMPORT"
+      },
+      {
+        "variable": "CARD_B_EXISTS",
+        "value": "2",
+        "mode": "EXPORT"
+      },
+      {
+        "variable": "ContactOptionalCards",
+        "value": "2",
+        "mode": "IMPORT"
+      },
+      {
+        "variable": "CARD_C_EXISTS",
+        "value": "3",
+        "mode": "EXPORT"
+      },
+      {
+        "variable": "ContactOptionalCards",
+        "value": "3",
+        "mode": "IMPORT"
+      },
+      {
+        "variable": "CARD_D_EXISTS",
+        "value": "4",
+        "mode": "EXPORT"
+      },
+      {
+        "variable": "ContactOptionalCards",
+        "value": "4",
+        "mode": "IMPORT"
+      },
+      {
+        "variable": "CARD_E_EXISTS",
+        "value": "5",
+        "mode": "EXPORT"
+      },
+      {
+        "variable": "ContactOptionalCards",
+        "value": "5",
+        "mode": "IMPORT"
+      }
+    ]
+  }
+}

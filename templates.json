@@ -1,0 +1,386 @@
+{
+  "templates": {
+    "implicit_linear_elasticity": {
+      "name": "Implicit Linear Elasticity Analysis",
+      "description": "Template for implicit linear elasticity problems using static analysis",
+      "keywords": [
+        {
+          "name": "*CONTROL_IMPLICIT_GENERAL",
+          "parameters": [
+            {
+              "name": "IMFLAG",
+              "field_0": "1",
+              "description": "Implicit flag (1=implicit)"
+            },
+            {
+              "name": "DT0",
+              "field_0": "0.01",
+              "description": "Initial time step size"
+            }
+          ]
+        },
+        {
+          "name": "*CONTROL_IMPLICIT_SOLUTION",
+          "parameters": [
+            {
+              "name": "NSOLVR",
+              "field_0": "1",
+              "description": "Linear solver (1=direct)"
+            }
+          ]
+        },
+        {
+          "name": "*CONTROL_TERMINATION",
+          "parameters": [
+            {
+              "name": "ENDTIM",
+              "field_0": "1.0",
+              "description": "Termination time"
+            }
+          ]
+        },
+        {
+          "name": "*DATABASE_BINARY_D3PLOT",
+          "parameters": [
+            {
+              "name": "DT",
+              "field_0": "0.1",
+              "description": "Output frequency"
+            }
+          ]
+        }
+      ]
+    },
+    "explicit_nonlinear_elasticity": {
+      "name": "Explicit Nonlinear Elasticity Analysis",
+      "description": "Template for explicit nonlinear elasticity problems with dynamic loading",
+      "keywords": [
+        {
+          "name": "*CONTROL_TIMESTEP",
+          "parameters": [
+            {
+              "name": "DTINIT",
+              "field_0": "0.001",
+              "description": "Initial time step"
+            },
+            {
+              "name": "TSSFAC",
+              "field_0": "0.9",
+              "description": "Scale factor for computed time step"
+            }
+          ]
+        },
+        {
+          "name": "*CONTROL_TERMINATION",
+          "parameters": [
+            {
+              "name": "ENDTIM",
+              "field_0": "0.1",
+              "description": "Termination time"
+            }
+          ]
+        },
+        {
+          "name": "*CONTROL_ENERGY",
+          "parameters": [
+            {
+              "name": "HGEN",
+              "field_0": "2",
+              "description": "Hourglass energy computation"
+            }
+          ]
+        },
+        {
+          "name": "*DATABASE_BINARY_D3PLOT",
+          "parameters": [
+            {
+              "name": "DT",
+              "field_0": "0.001",
+              "description": "Output frequency"
+            }
+          ]
+        }
+      ]
+    },
+    "structural_impact": {
+      "name": "Structural Impact Analysis",
+      "description": "Template for structural impact problems with contact and material failure",
+      "keywords": [
+        {
+          "name": "*CONTROL_CONTACT",
+          "parameters": [
+            {
+              "name": "PENCHK",
+              "field_0": "1",
+              "description": "Penalty check for initial penetration"
+            }
+          ]
+        },
+        {
+          "name": "*CONTROL_HOURGLASS",
+          "parameters": [
+            {
+              "name": "IHQ",
+              "field_0": "4",
+              "description": "Hourglass control type"
+            }
+          ]
+        },
+        {
+          "name": "*CONTROL_TIMESTEP",
+          "parameters": [
+            {
+              "name": "DTINIT",
+              "field_0": "0.0001",
+              "description": "Initial time step for impact"
+            }
+          ]
+        },
+        {
+          "name": "*CONTACT_AUTOMATIC_SINGLE_SURFACE",
+          "parameters": [
+            {
+              "name": "FS",
+              "field_0": "0.1",
+              "description": "Static friction coefficient"
+            },
+            {
+              "name": "FD",
+              "field_0": "0.05",
+              "description": "Dynamic friction coefficient"
+            }
+          ]
+        }
+      ]
+    },
+    "modal_analysis": {
+      "name": "Modal Analysis",
+      "description": "Template for eigenvalue modal analysis",
+      "keywords": [
+        {
+          "name": "*CONTROL_IMPLICIT_EIGENVALUE",
+          "parameters": [
+            {
+              "name": "NEIG",
+              "field_0": "10",
+              "description": "Number of eigenvalues to compute"
+            },
+            {
+              "name": "SHIFT",
+              "field_0": "0.0",
+              "description": "Shift frequency"
+            }
+          ]
+        },
+        {
+          "name": "*CONTROL_IMPLICIT_GENERAL",
+          "parameters": [
+            {
+              "name": "IMFLAG",
+              "field_0": "1",
+              "description": "Implicit flag"
+            }
+          ]
+        }
+      ]
+    },
+    "thermal_stress": {
+      "name": "Thermal Stress Analysis",
+      "description": "Template for thermal stress problems with temperature loading",
+      "keywords": [
+        {
+          "name": "*CONTROL_SOLUTION",
+          "parameters": [
+            {
+              "name": "SOLN",
+              "field_0": "1",
+              "description": "Solution method (1=nonlinear)"
+            }
+          ]
+        },
+        {
+          "name": "*CONTROL_THERMAL_SOLVER",
+          "parameters": [
+            {
+              "name": "TSCTRL",
+              "field_0": "1",
+              "description": "Thermal solver control"
+            }
+          ]
+        },
+        {
+          "name": "*LOAD_THERMAL_LOAD_CURVE",
+          "parameters": [
+            {
+              "name": "LCID",
+              "field_0": "1",
+              "description": "Load curve ID for temperature"
+            }
+          ]
+        }
+      ]
+    },
+    "ls_dyna_showcase_basic": {
+      "name": "LS-DYNA Showcase: Basic Crash Box",
+      "description": "Basic crash box example demonstrating explicit dynamics and contact",
+      "keywords": [
+        {
+          "name": "*CONTROL_TIMESTEP",
+          "parameters": [
+            {
+              "name": "DTINIT",
+              "field_0": "0.001",
+              "description": "Initial time step"
+            },
+            {
+              "name": "TSSFAC",
+              "field_0": "0.9",
+              "description": "Time step scale factor"
+            }
+          ]
+        },
+        {
+          "name": "*CONTROL_TERMINATION",
+          "parameters": [
+            {
+              "name": "ENDTIM",
+              "field_0": "0.05",
+              "description": "Simulation end time"
+            }
+          ]
+        },
+        {
+          "name": "*CONTROL_ENERGY",
+          "parameters": [
+            {
+              "name": "HGEN",
+              "field_0": "2",
+              "description": "Hourglass energy calculation"
+            },
+            {
+              "name": "RWEN",
+              "field_0": "1",
+              "description": "Rigid wall energy"
+            }
+          ]
+        },
+        {
+          "name": "*CONTACT_AUTOMATIC_SINGLE_SURFACE",
+          "parameters": [
+            {
+              "name": "FS",
+              "field_0": "0.3",
+              "description": "Static friction"
+            },
+            {
+              "name": "FD",
+              "field_0": "0.2",
+              "description": "Dynamic friction"
+            }
+          ]
+        },
+        {
+          "name": "*DATABASE_BINARY_D3PLOT",
+          "parameters": [
+            {
+              "name": "DT",
+              "field_0": "0.001",
+              "description": "Plot output frequency"
+            }
+          ]
+        }
+      ]
+    },
+    "ls_dyna_showcase_advanced": {
+      "name": "LS-DYNA Showcase: Advanced Impact",
+      "description": "Advanced impact example with material failure and adaptive meshing",
+      "keywords": [
+        {
+          "name": "*CONTROL_ADAPTIVE",
+          "parameters": [
+            {
+              "name": "ADPFREQ",
+              "field_0": "10",
+              "description": "Adaptive refinement frequency"
+            },
+            {
+              "name": "ADPTOL",
+              "field_0": "0.1",
+              "description": "Adaptive tolerance"
+            }
+          ]
+        },
+        {
+          "name": "*CONTROL_MPP_DECOMPOSITION_SHOW",
+          "parameters": [
+            {
+              "name": "NCPU",
+              "field_0": "4",
+              "description": "Number of CPUs for MPP"
+            }
+          ]
+        },
+        {
+          "name": "*CONTROL_TIMESTEP",
+          "parameters": [
+            {
+              "name": "DTINIT",
+              "field_0": "0.0005",
+              "description": "Initial time step for high-speed impact"
+            }
+          ]
+        },
+        {
+          "name": "*CONTROL_CONTACT",
+          "parameters": [
+            {
+              "name": "PENCHK",
+              "field_0": "1",
+              "description": "Penalty check for initial penetration"
+            },
+            {
+              "name": "BUCKET",
+              "field_0": "100",
+              "description": "Contact bucket sort frequency"
+            }
+          ]
+        },
+        {
+          "name": "*CONTACT_ERODING_SINGLE_SURFACE",
+          "parameters": [
+            {
+              "name": "FS",
+              "field_0": "0.15",
+              "description": "Static friction for eroding contact"
+            },
+            {
+              "name": "FD",
+              "field_0": "0.1",
+              "description": "Dynamic friction for eroding contact"
+            }
+          ]
+        },
+        {
+          "name": "*DATABASE_BINARY_D3PLOT",
+          "parameters": [
+            {
+              "name": "DT",
+              "field_0": "0.0005",
+              "description": "High-frequency output for impact analysis"
+            }
+          ]
+        },
+        {
+          "name": "*DATABASE_HISTORY_NODE",
+          "parameters": [
+            {
+              "name": "ID",
+              "field_0": "1",
+              "description": "Node ID for history output"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

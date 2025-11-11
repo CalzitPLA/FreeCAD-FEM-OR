@@ -18,152 +18,43 @@ from .manager import CommandManager
 # Import CacheViewerWindow from the current module
 # The class is defined later in this file
 
-# Initialize cache directory variables
-CACHE_DIR = ""
-CACHE_FILE = ""
-
-def init_cache_paths():
-    """Initialize the cache directory paths with fallbacks."""
-    global CACHE_DIR, CACHE_FILE
-    
-    # Try different standard locations in order of preference
-    possible_paths = [
-        # Standard XDG cache directory
-        os.path.join(os.path.expanduser('~/.cache'), 'FreeCAD', 'Fem_upgraded'),
-        # Fallback to FreeCAD config directory
-        os.path.join(App.getUserAppDataDir(), 'cache', 'Fem_upgraded'),
-        # Final fallback to home directory
-        os.path.join(os.path.expanduser('~'), '.FreeCAD', 'Fem_upgraded_cache')
-    ]
-    
-    # Try each path until we find one that works
-    for path in possible_paths:
-        try:
-            os.makedirs(path, exist_ok=True, mode=0o755)
-            # Test if we can write to the directory
-            test_file = os.path.join(path, '.write_test')
-            with open(test_file, 'w') as f:
-                f.write('test')
-            os.remove(test_file)
-            
-            # If we get here, the path is good
-            CACHE_DIR = path
-            CACHE_FILE = os.path.join(path, 'keyword_cache.json')
-            print(f"Using cache directory: {CACHE_DIR}")
-            return
-            
-        except (OSError, IOError) as e:
-            print(f"Could not use cache directory {path}: {e}")
-    
-    # If all else fails, use a temporary directory
-    import tempfile
-    CACHE_DIR = os.path.join(tempfile.gettempdir(), 'freecad_fem_upgraded_cache')
-    os.makedirs(CACHE_DIR, exist_ok=True, mode=0o777)
-    CACHE_FILE = os.path.join(CACHE_DIR, 'keyword_cache.json')
-    print(f"WARNING: Using temporary cache directory: {CACHE_DIR}")
-
-# Initialize the cache paths
-init_cache_paths()
+# Cache file location in user's FreeCAD config directory
+CACHE_DIR = os.path.join(App.getUserAppDataDir(), 'Radioss', 'cache')
+CACHE_FILE = os.path.join(CACHE_DIR, 'keyword_cache.json')
 
 def ensure_cache_dir():
-    """Ensure the cache directory exists and is writable."""
-    try:
-        # Check if directory exists and is writable
-        if os.path.exists(CACHE_DIR):
-            test_file = os.path.join(CACHE_DIR, '.write_test')
-            try:
-                with open(test_file, 'w') as f:
-                    f.write('test')
-                os.remove(test_file)
-                return True
-            except (IOError, OSError):
-                print(f"Warning: Cache directory {CACHE_DIR} is not writable")
-        
-        # If we get here, either directory doesn't exist or isn't writable
-        os.makedirs(CACHE_DIR, exist_ok=True, mode=0o755)
-        # Verify we can write to it
-        test_file = os.path.join(CACHE_DIR, '.write_test')
-        with open(test_file, 'w') as f:
-            f.write('test')
-        os.remove(test_file)
-        print(f"Using cache directory: {CACHE_DIR}")
-        return True
-        
-    except Exception as e:
-        print(f"Error with cache directory {CACHE_DIR}: {e}")
-        return False
+    """Ensure the cache directory exists."""
+    if not os.path.exists(CACHE_DIR):
+        os.makedirs(CACHE_DIR, exist_ok=True)
 
 def save_cache_to_disk(cache_data):
     """Save the cache data to disk."""
     try:
-        # Print debug info about the cache data
-        cache_size = len(cache_data) if cache_data else 0
-        print(f"[CACHE] Saving {cache_size} items to disk...")
-        
-        # Ensure cache directory exists
-        if not ensure_cache_dir():
-            print(f"[CACHE] Error: Could not ensure cache directory exists at {CACHE_DIR}")
-            return False
-            
-        # Write the cache file
-        print(f"[CACHE] Writing cache to: {CACHE_FILE}")
+        ensure_cache_dir()
         with open(CACHE_FILE, 'w') as f:
             json.dump(cache_data, f, indent=2)
-            
-        # Verify the file was written
-        if os.path.exists(CACHE_FILE):
-            file_size = os.path.getsize(CACHE_FILE)
-            print(f"[CACHE] Successfully wrote {file_size} bytes to {CACHE_FILE}")
-            if cache_size > 0:
-                print(f"[CACHE] First item in cache: {str(cache_data[0])[:100]}...")
-            return True
-        else:
-            print(f"[CACHE] Error: Cache file was not created at {CACHE_FILE}")
-            return False
-            
+        return True
     except Exception as e:
-        import traceback
-        print(f"[CACHE] Error saving cache to disk: {e}")
-        print("Traceback:")
-        traceback.print_exc()
+        print(f"Error saving cache to disk: {e}")
         return False
 
 def load_cache_from_disk():
     """Load the cache data from disk."""
     if not os.path.exists(CACHE_FILE):
-        print(f"No cache file found at {CACHE_FILE}")
         return []
     
     try:
-        print(f"Loading cache from {CACHE_FILE}")
         with open(CACHE_FILE, 'r') as f:
-            data = json.load(f)
-            if not isinstance(data, list):
-                print(f"Warning: Cache file does not contain a list, got {type(data)}")
-                return []
-            print(f"Loaded {len(data)} items from cache")
-            return data
-    except json.JSONDecodeError as e:
-        print(f"Error decoding JSON from cache file {CACHE_FILE}: {e}")
-        # Try to create a backup of the corrupted file
-        try:
-            import shutil
-            backup_file = f"{CACHE_FILE}.corrupted.{int(time.time())}"
-            shutil.copy2(CACHE_FILE, backup_file)
-            print(f"Created backup of corrupted cache file at {backup_file}")
-        except Exception as backup_err:
-            print(f"Could not create backup of corrupted cache file: {backup_err}")
-        return []
+            return json.load(f)
     except Exception as e:
         print(f"Error loading cache from disk: {e}")
-        import traceback
-        traceback.print_exc()
         return []
 
-class OpenCacheViewer:
+class OpenCacheViewer(CommandManager):
     """Command to open the LS-DYNA cache viewer window."""
     
     def __init__(self):
+        super(OpenCacheViewer, self).__init__()
         self.menutext = "Open Cache Viewer"
         self.tooltip = "Open the LS-DYNA keyword cache viewer"
         self.pixmap = "document-open"
@@ -177,10 +68,6 @@ class OpenCacheViewer:
             'ToolTip': self.tooltip,
             'CmdType': 'ForEdit'
         }
-        
-    def IsActive(self):
-        """Define whether the command is active or not (greyed out)."""
-        return True
 
     def Activated(self):
         """Run the command to open the cache viewer."""
@@ -480,60 +367,43 @@ class CacheViewerWindow(QtWidgets.QDialog):
 
     def closeEvent(self, event):
         """Handle window close event."""
+        # Save any pending changes
+        self.save_analysis_cache()
+        
+        # Stop timers
+        self.update_timer.stop()
+        self.background_timer.stop()
+        
+        # Don't actually close, just hide
+        event.ignore()
+        
+        # Clear the table
+        self.cache_table.clearContents()
+        self.cache_table.setRowCount(0)
+        if not self.analysis_doc:
+            return
+            
+        # Filter items that belong to this document
+        doc_cache = [
+            item for item in self.keyword_cache 
+            if isinstance(item, dict) and 
+            item.get('document_id') == self.analysis_doc.Name
+        ]
+        
+        if not doc_cache:
+            return
+            
+        # Save to document-specific cache file
+        cache_file = os.path.join(
+            os.path.dirname(CACHE_FILE),
+            f"{self.analysis_doc.Name}_cache.json"
+        )
+        
         try:
-            # Save any pending changes to analysis cache
-            self.save_analysis_cache()
-            
-            # Save the main cache to disk
-            if hasattr(self, 'keyword_cache') and self.keyword_cache:
-                try:
-                    # Ensure cache directory exists
-                    if not os.path.exists(CACHE_DIR):
-                        os.makedirs(CACHE_DIR, exist_ok=True)
-                    
-                    # Save the main cache
-                    save_cache_to_disk(self.keyword_cache)
-                    print(f"Saved {len(self.keyword_cache)} keywords to main cache at {CACHE_FILE}")
-                    
-                    # If we have an analysis document, also save a document-specific cache
-                    if self.analysis_doc:
-                        doc_cache = [
-                            item for item in self.keyword_cache 
-                            if isinstance(item, dict) and 
-                            item.get('document_id') == self.analysis_doc.Name
-                        ]
-                        
-                        if doc_cache:
-                            cache_file = os.path.join(
-                                CACHE_DIR,
-                                f"{self.analysis_doc.Name}_cache.json"
-                            )
-                            with open(cache_file, 'w') as f:
-                                json.dump(doc_cache, f, indent=2)
-                            print(f"Saved {len(doc_cache)} keywords to document cache at {cache_file}")
-                except Exception as e:
-                    print(f"Error saving cache on close: {e}")
-            
-            # Stop timers
-            self.update_timer.stop()
-            self.background_timer.stop()
-            
-            # Clear the table
-            if hasattr(self, 'cache_table'):
-                self.cache_table.clearContents()
-                self.cache_table.setRowCount(0)
-            
-            # Remove from instances dictionary
-            if self.analysis_doc and self.analysis_doc.Name in _cache_viewer_instances:
-                del _cache_viewer_instances[self.analysis_doc.Name]
-            
-            # Accept the close event
-            event.accept()
-            
+            with open(cache_file, 'w') as f:
+                json.dump(doc_cache, f, indent=2)
         except Exception as e:
-            print(f"Error in closeEvent: {e}")
-            # Still allow the window to close
-            event.accept()
+            print(f"Error saving analysis cache: {e}")
 
     def setup_ui(self):
         """Set up the user interface with proper layout and controls."""
@@ -707,32 +577,12 @@ class CacheViewerWindow(QtWidgets.QDialog):
     
     def center_on_screen(self):
         """Center the window on the screen."""
-        try:
-            # Get the primary screen
-            screen = QtWidgets.QApplication.primaryScreen()
-            if not screen:
-                # Fallback to the first available screen
-                screens = QtWidgets.QApplication.screens()
-                if screens:
-                    screen = screens[0]
-                else:
-                    # If no screens found, just return
-                    return
-            
-            # Get the screen geometry
-            screen_geometry = screen.availableGeometry()
-            
-            # Calculate center point
-            x = (screen_geometry.width() - self.width()) // 2
-            y = (screen_geometry.height() - self.height()) // 2
-            
-            # Move the window to the center
-            self.move(screen_geometry.left() + x, screen_geometry.top() + y)
-            
-        except Exception as e:
-            print(f"Error centering window: {e}")
-            # Fallback to default position
-            self.move(100, 100)
+        frame_geometry = self.frameGeometry()
+        screen = QtWidgets.QApplication.desktop().screenNumber(
+            QtWidgets.QApplication.desktop().cursor().pos())
+        center_point = QtWidgets.QApplication.desktop().screenGeometry(screen).center()
+        frame_geometry.moveCenter(center_point)
+        self.move(frame_geometry.topLeft())
 
     def closeEvent(self, event):
         """Handle window close event."""

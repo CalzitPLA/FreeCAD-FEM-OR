@@ -193,4 +193,47 @@ class Results(run.Results):
                             FreeCAD.Console.PrintMessage(f"DEBUG: Set frequency for mode {m.Eigenmode}\n")
 
 
+class _TaskPanel:
+    """TaskPanel for the OpenRadioss solver."""
+    
+    def __init__(self, obj):
+        self.obj = obj
+        self.form = FreeCADGui.PySideUic.loadUi(
+            os.path.join(os.path.dirname(__file__), "TaskPanel.ui")
+        )
+        self._setupConnections()
+        
+    def _setupConnections(self):
+        """Setup signal/slot connections for the UI."""
+        self.form.pb_edit.clicked.connect(self.edit)
+        self.form.pb_reset.clicked.connect(self.reset)
+        
+    def setupUi(self):
+        """Initialize the UI with current values."""
+        self.form.sb_eigenmodes.setValue(self.obj.Eigenmodes)
+        self.form.sb_cycles.setValue(self.obj.IterationsMaximum)
+        self.form.dsb_time_step.setValue(self.obj.TimeStep)
+        self.form.dsb_time_end.setValue(self.obj.TimeEnd)
+        
+    def edit(self):
+        """Handle edit button click."""
+        self.obj.Eigenmodes = self.form.sb_eigenmodes.value()
+        self.obj.IterationsMaximum = self.form.sb_cycles.value()
+        self.obj.TimeStep = self.form.dsb_time_step.value()
+        self.obj.TimeEnd = self.form.dsb_time_end.value()
+        FreeCADGui.ActiveDocument.resetEdit()
+        
+    def reset(self):
+        """Reset to default values."""
+        self.form.sb_eigenmodes.setValue(10)
+        self.form.sb_cycles.setValue(1000)
+        self.form.dsb_time_step.setValue(1.0)
+        self.form.dsb_time_end.setValue(1.0)
+    
+    @staticmethod
+    def unsetEdit():
+        """Clean up when editing is finished."""
+        FreeCADGui.Control.closeDialog()
+        FreeCAD.ActiveDocument.recompute()
+
 ##  @}
